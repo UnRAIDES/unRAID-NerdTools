@@ -5,7 +5,7 @@
 <!ENTITY author    "UnRAIDES">
 <!ENTITY version   "2022.09.29">
 <!ENTITY launch    "Settings/&name;">
-<!ENTITY gitURL    "https://raw.githubusercontent.com/&author;/unRAID-&name;/master">
+<!ENTITY gitURL    "https://raw.githubusercontent.com/jsavargas/unRAID-&name;/2022.09.28">
 <!ENTITY pluginURL "&gitURL;/plugin/&name;.plg">
 <!ENTITY pkgURL    "&gitURL;/source/packages">
 <!ENTITY plgPATH   "/boot/config/plugins/&name;">
