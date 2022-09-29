@@ -34,11 +34,13 @@ function file_check_sha1($file) {
     $detalle['path'] = "packages/$version/".basename($file);
     $detalle['sha'] = $sha1_file;
     $detalle['size'] = $size;
-    $detalle['download_url'] = "https://raw.githubusercontent.com/UnRAIDES/unRAID-NerdPack/master/packages/$version/".basename($file);
+    $detalle['download_url'] = "https://raw.githubusercontent.com/jsavargas/unRAID-NerdTools/2022.09.28/packages/$version/".basename($file);
     $detalle['type'] = 'file';
 
     //print_r($detalle);
     //print_r($detalle);
+    //     $detalle['download_url'] = "https://raw.githubusercontent.com/UnRAIDES/unRAID-NerdPack/master/packages/$version/".basename($file);
+
     
     return ($detalle);
 }

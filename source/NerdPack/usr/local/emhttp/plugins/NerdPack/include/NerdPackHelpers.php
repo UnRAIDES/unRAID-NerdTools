@@ -9,11 +9,9 @@ if (!is_dir($pkg_path))
 if (!is_dir($pkg_extra))
     mkdir($pkg_extra);
 
-//$pkg_desc = 'https://raw.githubusercontent.com/dmacias72/unRAID-NerdPack/master/packages/packages-desc';
-//$pkg_repo = "https://api.github.com/repos/dmacias72/unRAID-NerdPack/contents/packages/$os_version";
 
-$pkg_desc = 'https://raw.githubusercontent.com/UnRAIDES/unRAID-NerdPack/master/packages/packages-desc';
-$pkg_repo = "https://raw.githubusercontent.com/UnRAIDES/unRAID-NerdPack/master/contents/packages.$os_version.json";
+$pkg_desc = 'https://raw.githubusercontent.com/jsavargas/unRAID-NerdTools/2022.09.28/contents/packages-desc';
+$pkg_repo = "https://raw.githubusercontent.com/jsavargas/unRAID-NerdTools/2022.09.28/contents/packages.$os_version.json";
 
 $desc_file   = $pkg_path.'packages-desc';
 $repo_file   = $pkg_path.'packages.json';
