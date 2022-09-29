@@ -28,7 +28,7 @@ $(function(){
             checked: $.cookie('nerdpack_packages_uninstall') == '--uninstall'
         })
         .change(function () {
-            $.cookie('nerdpack_packages_uninstall', '--uninstall', { expires: 3650 });
+            $.cookie('nerdpack_packages_uninstall', $('.uninstallpkg')[0].checked ? '--uninstall' : '', { expires: 3650 });
         });
 
     // select all packages switch
@@ -53,7 +53,7 @@ $(function(){
 //list all available packages in a table
 function packageQuery(force) {
     $('#tblPackages tbody').html("<tr><td colspan='6'><br><i class='fa fa-spinner fa-spin icon'></i><em>Please wait, retrieving plugin information ...</em></td><tr>");
-    $.getJSON('/plugins/NerdPack/include/PackageQuery.php', {force: force}, function(data) {
+    $.getJSON('/plugins/NerdTools/include/PackageQuery.php', {force: force}, function(data) {
         $('#tblPackages tbody').empty();
         var Ready;
         var Count = 0;
@@ -150,45 +150,52 @@ function Apply() {
         checkDepends();
         var Arg2 = (typeof $.cookie('nerdpack_packages_uninstall') === 'undefined') ? '' : '&arg2='+$.cookie('nerdpack_packages_uninstall');
         $.post('/update.php', $('#package_form').serializeArray(), function() {
-                openBox('/plugins/NerdPack/scripts/packagemanager&arg1=--download'+ Arg2,
+                openBox('/plugins/NerdTools/scripts/packagemanager&arg1=--download'+ Arg2,
                             'Package Manager', 600, 900, true);
             }
         );
 }
 
 function checkDepends() {
-    if ($('#screen')[0].checked) {
-        $('#utempter').switchButton({checked: true});
-        $('#utempter', '.pkgvalue').val('yes');
-        $('#ncurses-terminfo').switchButton({checked: true});
-        $('#ncurses-terminfo', '.pkgvalue').val('yes');
+    try {
+        if ($('#screen')[0].checked) {
+            $('#utempter').switchButton({checked: true});
+            $('#utempter', '.pkgvalue').val('yes');
+            $('#ncurses-terminfo').switchButton({checked: true});
+            $('#ncurses-terminfo', '.pkgvalue').val('yes');
+        }
+        if ($('#tmux')[0].checked) {
+            $('#ncurses-terminfo').switchButton({checked: true});
+            $('#ncurses-terminfo', '.pkgvalue').val('yes');
+        }
+        if ($('#expect')[0].checked) {
+            $('#tcl').switchButton({checked: true});
+            $('#tcl', '.pkgvalue').val('yes');
+        }
+        if ($('#iotop')[0].checked) {
+            $('#python2').switchButton({checked: true});
+            $('#python2', '.pkgvalue').val('yes');
+        }
+        if ($('#vim')[0].checked) {
+            $('#libsodium').switchButton({checked: true});
+            $('#libsodium', '.pkgvalue').val('yes');
+        }
+        if ($('#borgbackup')[0].checked) {
+            $('#python3').switchButton({checked: true});
+            $('#python3', '.pkgvalue').val('yes');
+            $('#python-setuptools').switchButton({checked: true});
+            $('#python-setuptools', '.pkgvalue').val('yes');
+            $('#llfuse').switchButton({checked: true});
+            $('#llfuse', '.pkgvalue').val('yes');
+        }
+        if ($('#irssi')[0].checked) {
+            $('#utf8proc').switchButton({checked: true});
+            $('#utf8proc', '.pkgvalue').val('yes');
+        }
+    } catch (error) {
+        console.error(error);
+        // expected output: ReferenceError: nonExistentFunction is not defined
+        // Note - error messages will vary depending on browser
     }
-    if ($('#tmux')[0].checked) {
-        $('#ncurses-terminfo').switchButton({checked: true});
-        $('#ncurses-terminfo', '.pkgvalue').val('yes');
-    }
-    if ($('#expect')[0].checked) {
-        $('#tcl').switchButton({checked: true});
-        $('#tcl', '.pkgvalue').val('yes');
-    }
-    if ($('#iotop')[0].checked) {
-        $('#python2').switchButton({checked: true});
-        $('#python2', '.pkgvalue').val('yes');
-    }
-    if ($('#vim')[0].checked) {
-        $('#libsodium').switchButton({checked: true});
-        $('#libsodium', '.pkgvalue').val('yes');
-    }
-    if ($('#borgbackup')[0].checked) {
-        $('#python3').switchButton({checked: true});
-        $('#python3', '.pkgvalue').val('yes');
-        $('#python-setuptools').switchButton({checked: true});
-        $('#python-setuptools', '.pkgvalue').val('yes');
-        $('#llfuse').switchButton({checked: true});
-        $('#llfuse', '.pkgvalue').val('yes');
-    }
-    if ($('#irssi')[0].checked) {
-        $('#utf8proc').switchButton({checked: true});
-        $('#utf8proc', '.pkgvalue').val('yes');
-    }
+  
 }

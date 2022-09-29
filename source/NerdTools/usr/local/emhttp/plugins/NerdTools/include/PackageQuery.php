@@ -1,6 +1,6 @@
 <?
-require_once '/usr/local/emhttp/plugins/NerdPack/include/NerdPackHelpers.php';
-require_once '/usr/local/emhttp/plugins/NerdPack/include/DownloadHelpers.php';
+require_once '/usr/local/emhttp/plugins/NerdTools/include/NerdPackHelpers.php';
+require_once '/usr/local/emhttp/plugins/NerdTools/include/DownloadHelpers.php';
 
 // Only download repo update if the current one is 1 hour old or more
 if (!file_exists($repo_file) || !empty($_GET['force']) || (filemtime($repo_file) < (time() - 3600))) {
@@ -14,6 +14,8 @@ $pkgs_array = [];
 
 foreach ($pkgs_github_array as $pkg_github) {
     $pkg_nameArray = explode('-', $pkg_github['name']); // split package name into array
+
+
 
     // strip md5 files
     if(!strpos(end($pkg_nameArray),'.md5')) {
@@ -72,6 +74,7 @@ foreach ($pkgs_github_array as $pkg_github) {
         $pkgs_array[] = $pkg;
     }
 }
+
 
 $return = [
         'packages' => $pkgs_array,

@@ -1,21 +1,23 @@
 <?php
-$plg_path = '/boot/config/plugins/NerdPack/'; // plugin path
+$plg_path = '/boot/config/plugins/NerdTools/'; // plugin path
 $os_version = strtok(parse_ini_file('/etc/unraid-version')['version'], '.') . '.' . strtok('.');
-#$os_version = '6.10';
+
 $pkg_path = $plg_path; // package path
-$pkg_extra = "/boot/extra/"; // package path
+$pkg_path = $plg_path; // package path
 if (!is_dir($pkg_path))
     mkdir($pkg_path);
-if (!is_dir($pkg_extra))
-    mkdir($pkg_extra);
-
+    
+$pkg_extra_path = "/boot/extra/"; // package path
+if (!is_dir($pkg_extra_path))
+    mkdir($pkg_extra_path);
 
 $pkg_desc = 'https://raw.githubusercontent.com/jsavargas/unRAID-NerdTools/2022.09.28/contents/packages-desc';
 $pkg_repo = "https://raw.githubusercontent.com/jsavargas/unRAID-NerdTools/2022.09.28/contents/packages.$os_version.json";
+    
 
 $desc_file   = $pkg_path.'packages-desc';
 $repo_file   = $pkg_path.'packages.json';
-$config_file = $plg_path.'NerdPack.cfg';
+$config_file = $plg_path.'NerdTools.cfg';
 
 // get package configs
 $pkg_cfg = file_exists($config_file) ? parse_ini_file($config_file) : [];
