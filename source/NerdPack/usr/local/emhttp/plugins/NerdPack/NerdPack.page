@@ -1,0 +1,47 @@
+Icon="dropbox"
+Menu="UserPreferences"
+Title="Nerd Pack"
+Tag="dropbox"
+---
+<link type="text/css" rel="stylesheet" href="<?=autov('/plugins/NerdPack/css/tablesorter.css');?>">
+<link type="text/css" rel="stylesheet" href="<?=autov('/plugins/NerdPack/css/tablesorter-'.(($display['theme'] == 'white' || $display['theme'] == 'azure') ? 'white' : 'black').'.css');?>">
+<link type="text/css" rel="stylesheet" href="<?=autov('/webGui/styles/jquery.switchbutton.css');?>">
+<link type="text/css" rel="stylesheet" href="<?=autov('/plugins/NerdPack/css/NerdPack.css');?>">
+<style>
+table.tablesorter tbody tr:nth-child(odd) {
+    background-color: #<?=($display['theme'] == 'white' || $display['theme'] == 'azure') ? 'F0F0F0' : '212421';?>;
+}
+table.tablesorter tbody tr:nth-child(even) {
+    background-color: #<?=($display['theme'] == 'white' || $display['theme'] == 'azure') ? 'e4e2e4' : '1b1d1b';?>;
+}
+</style>
+
+<form markdown="1" id="package_form" name="package_settings" method="POST" action="/update.php" target="progressFrame">
+<input type="hidden" id="include" name="#include" value="/plugins/NerdPack/include/ClearConfig.php"/>
+
+<div class="wrapper">
+<table class="tablesorter hover-highlight" id="tblPackages">
+    <thead>
+        <tr>
+            <th class="filter-name" data-placeholder="Search..."> Name </th>
+            <th class="filter-version" data-placeholder="by status"> Status </th>
+            <th class="sorter-metric filter-false" data-placeholder="by size" data-metric-name-full="byte|Byte|BYTE" data-metric-name-abbr="b|B"> Size </th>
+            <th class="filter-downloaded" data-placeholder="by download"> Downloaded </th>
+            <th class="filter-installed" data-placeholder="by install"> Installed </th>
+            <th class="filter-plugins" data-placeholder="Search..."> Plugins </th>
+            <th class="parser-false filter-false" nowrap="nowrap"><input class="uninstallpkg" type="checkbox"><input class="checkall" type="checkbox"></th>
+        </tr>
+    </thead>
+    <tbody>
+    </tbody>
+</table>
+</div>
+<input onclick="packageQuery(1)" value="Check for Updates" type="button"><input class="reset" type="button" title="reset filters" value="Reset Filters">
+: <input id="btnApply" type="button" value="Apply"><input type="button" value="Done" onClick="done()">
+<input type="hidden" name="#file" value="NerdPack/NerdPack.cfg">
+</form>
+
+<script src="<?=autov('/plugins/NerdPack/js/jquery.tablesorter.combined.min.js');?>"></script>
+<script src="<?=autov('/plugins/NerdPack/js/parser-metric.min.js');?>"></script>
+<script type="text/javascript" src="<?=autov('/webGui/javascript/jquery.switchbutton.js');?>"></script>
+<script type="text/javascript" src="<?=autov('/plugins/NerdPack/js/jquery.NerdPack.js');?>"></script>
