@@ -2,9 +2,12 @@
 $plg_path = '/boot/config/plugins/NerdPack/'; // plugin path
 $os_version = strtok(parse_ini_file('/etc/unraid-version')['version'], '.') . '.' . strtok('.');
 #$os_version = '6.10';
-$pkg_path = $plg_path."packages/$os_version/"; // package path
+$pkg_path = $plg_path; // package path
+$pkg_extra = "/boot/extra/"; // package path
 if (!is_dir($pkg_path))
     mkdir($pkg_path);
+if (!is_dir($pkg_extra))
+    mkdir($pkg_extra);
 
 //$pkg_desc = 'https://raw.githubusercontent.com/dmacias72/unRAID-NerdPack/master/packages/packages-desc';
 //$pkg_repo = "https://api.github.com/repos/dmacias72/unRAID-NerdPack/contents/packages/$os_version";

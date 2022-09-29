@@ -1,9 +1,9 @@
 <?xml version='1.0' standalone='yes'?>
 
 <!DOCTYPE PLUGIN [
-<!ENTITY name      "NerdPack">
+<!ENTITY name      "NerdTools">
 <!ENTITY author    "UnRAIDES">
-<!ENTITY version   "2022.09.27a">
+<!ENTITY version   "2022.09.29">
 <!ENTITY launch    "Settings/&name;">
 <!ENTITY gitURL    "https://raw.githubusercontent.com/&author;/unRAID-&name;/master">
 <!ENTITY pluginURL "&gitURL;/plugin/&name;.plg">
@@ -68,7 +68,6 @@ echo " Copyright 2016-2021, dmacias72, eschultz"
 echo " Version: &version;"
 echo "-----------------------------------------------------------"
 echo ""
-fi
 </INLINE>
 </FILE>
 

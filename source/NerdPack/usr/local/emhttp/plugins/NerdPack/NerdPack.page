@@ -1,6 +1,6 @@
 Icon="dropbox"
 Menu="UserPreferences"
-Title="Nerd Pack"
+Title="NerdTools"
 Tag="dropbox"
 ---
 <link type="text/css" rel="stylesheet" href="<?=autov('/plugins/NerdPack/css/tablesorter.css');?>">
@@ -29,7 +29,7 @@ table.tablesorter tbody tr:nth-child(even) {
             <th class="filter-downloaded" data-placeholder="by download"> Downloaded </th>
             <th class="filter-installed" data-placeholder="by install"> Installed </th>
             <th class="filter-plugins" data-placeholder="Search..."> Plugins </th>
-            <th class="parser-false filter-false" nowrap="nowrap"><input class="uninstallpkg" type="checkbox"><input class="checkall" type="checkbox"></th>
+            <th class="filter-false" data-placeholder="by status"> Installed </th>
         </tr>
     </thead>
     <tbody>

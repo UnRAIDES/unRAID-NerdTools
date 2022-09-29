@@ -80,7 +80,7 @@ foreach ($pkg_cfg as $pkg_name => $pkg_pref) { // get preferences for each packa
     });
 
     $pkg_gitname = array_values($pkg_matches)[0]['name'];
-    $pkg_file    = $pkg_path.$pkg_gitname;
+    $pkg_file    = $pkg_extra.$pkg_gitname;
     $pkg_url     = array_values($pkg_matches)[0]['download_url'];
     $pkg_sha1    = array_values($pkg_matches)[0]['sha'];
 
@@ -120,7 +120,7 @@ foreach ($pkg_cfg as $pkg_name => $pkg_pref) { // get preferences for each packa
 
         if (!$pkg_install_status) { // if package is not installed
             $pkg_msg = 'Installing';
-            $pkg_cmd = 'upgradepkg --install-new '.$pkg_path.$pkg_name.'* 2>&1';
+            $pkg_cmd = 'upgradepkg --install-new '.$pkg_extra.$pkg_name.'* 2>&1';
         }
 
     } elseif ($pkg_pref == 'no' && $pkg_download_status && $argu) {
@@ -128,7 +128,7 @@ foreach ($pkg_cfg as $pkg_name => $pkg_pref) { // get preferences for each packa
             logger("$pkg_name in use by another plugin, not uninstalled.",$argq);
         }else{
             $pkg_msg = 'Uninstalling and deleting';
-            $pkg_cmd = 'removepkg '.$pkg_path.$pkg_name.'* 2>&1; rm '.$pkg_path.$pkg_name.'* 2>&1';
+            $pkg_cmd = 'removepkg '.$pkg_extra.$pkg_name.'* 2>&1; rm '.$pkg_extra.$pkg_name.'* 2>&1';
         }
     }
 
@@ -155,7 +155,7 @@ foreach ($pkg_cfg as $pkg_name => $pkg_pref) { // get preferences for each packa
 }
 logger('Cleaning up packages...');
 
-$cmd = "find ".$pkg_path." -type f ! -name 'packages.json' ! -name 'packages-desc'".$pkg_find." -delete 2>&1";
+$cmd = "find ".$pkg_extra." -type f ! -name 'packages.json' ! -name 'packages-desc'".$pkg_find." -delete 2>&1";
 shell_exec($cmd);
 
 logger('All packages processed...');
