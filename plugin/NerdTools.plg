@@ -3,8 +3,8 @@
 <!DOCTYPE PLUGIN [
 <!ENTITY name      "NerdTools">
 <!ENTITY author    "UnRAIDES">
-<!ENTITY version   "2022.09.29m">
-<!ENTITY md5       "c622560a0deab0add23ef6d0dee7edef">
+<!ENTITY version   "2022.09.29n">
+<!ENTITY md5       "62e7ff10901326d53cd4c17772af0b99">
 <!ENTITY launch    "Settings/&name;">
 <!ENTITY github    "jsavargas/unRAID-&name;">
 <!ENTITY pluginURL "https://raw.githubusercontent.com/&github;/2022.09.28/plugin/&name;.plg">
@@ -38,7 +38,7 @@
 <?
   $version = parse_ini_file("/etc/unraid-version");
   
-  if ( version_compare($version['version'],"6.10", "<") )
+  if ( version_compare($version['version'],"6.11", "<") )
   {
     echo "**********************************************************************\n";
     echo "\n";
