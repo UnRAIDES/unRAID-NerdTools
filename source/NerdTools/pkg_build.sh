@@ -16,6 +16,5 @@ cp --parents -f $(find . -type f ! \( -iname "pkg_build.sh" -o -iname "sftp-conf
 cd $tmpdir
 makepkg -l y -c y ${archive}/${plugin}-${version}-x86_64-1.txz
 rm -rf $tmpdir
-echo "MD5:"
-md5sum ${archive}/${plugin}-${version}-x86_64-1.txz
-md5sum ${archive}/${plugin}-${version}-x86_64-1.txz |awk '{print $1}'| while read line; do echo "$line  ${plugin}-${version}-x86_64-1.txz"; done > ${archive}/${plugin}-${version}-x86_64-1.md5
+
+
