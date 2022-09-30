@@ -4,7 +4,7 @@
 <!ENTITY name      "NerdTools">
 <!ENTITY author    "UnRAIDES">
 <!ENTITY version   "2022.09.30">
-<!ENTITY md5       "bce7456cc2add51f2bfbb8015a97c163">
+<!ENTITY md5       "279f45e33dbc23b216bd85799951bfdf">
 <!ENTITY launch    "Settings/&name;">
 <!ENTITY github    "UnRAIDES/unRAID-&name;">
 <!ENTITY pluginURL "https://raw.githubusercontent.com/&github;/main/plugin/&name;.plg">
@@ -82,7 +82,7 @@ echo ""
 
 
 <FILE Name="/boot/config/plugins/&name;/&name;-&version;-x86_64-1.txz" Run="upgradepkg --install-new --reinstall">
-<URL>https://raw.githubusercontent.com/jsavargas/unRAID-&name;/2022.09.28/archive/&name;-&version;-x86_64-1.txz</URL>
+<URL>https://raw.githubusercontent.com/UnRAIDES/unRAID-&name;/main/archive/&name;-&version;-x86_64-1.txz</URL>
 <MD5>&md5;</MD5>
 </FILE>
 
