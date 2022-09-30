@@ -3,17 +3,16 @@ $plg_path = '/boot/config/plugins/NerdTools/'; // plugin path
 $os_version = strtok(parse_ini_file('/etc/unraid-version')['version'], '.') . '.' . strtok('.');
 
 $pkg_path = $plg_path; // package path
-$pkg_path = $plg_path; // package path
 if (!is_dir($pkg_path))
     mkdir($pkg_path);
-    
+
 $pkg_extra_path = "/boot/extra/"; // package path
 if (!is_dir($pkg_extra_path))
     mkdir($pkg_extra_path);
-
+    
 $pkg_desc = 'https://raw.githubusercontent.com/jsavargas/unRAID-NerdTools/2022.09.28/contents/packages-desc';
 $pkg_repo = "https://raw.githubusercontent.com/jsavargas/unRAID-NerdTools/2022.09.28/contents/packages.$os_version.json";
-    
+
 
 $desc_file   = $pkg_path.'packages-desc';
 $repo_file   = $pkg_path.'packages.json';
@@ -23,7 +22,7 @@ $config_file = $plg_path.'NerdTools.cfg';
 $pkg_cfg = file_exists($config_file) ? parse_ini_file($config_file) : [];
 
 // get array of downloaded packages
-$pkgs_downloaded   = is_dir($pkg_path) ? array_diff(scandir($pkg_path, 1), ['.', '..','packages.json','packages-desc']) : [];
+$pkgs_downloaded   = is_dir($pkg_extra_path) ? array_diff(scandir($pkg_extra_path, 1), ['.', '..','packages.json','packages-desc']) : [];
 
 // get array of all installed packages
 $pkgs_installed    = array_diff(scandir("/var/log/packages", 1), ['.', '..']);

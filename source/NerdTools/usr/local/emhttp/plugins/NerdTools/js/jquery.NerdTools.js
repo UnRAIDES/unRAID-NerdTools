@@ -158,12 +158,7 @@ function Apply() {
 
 function checkDepends() {
     try {
-        if ($('#screen')[0].checked) {
-            $('#utempter').switchButton({checked: true});
-            $('#utempter', '.pkgvalue').val('yes');
-            $('#ncurses-terminfo').switchButton({checked: true});
-            $('#ncurses-terminfo', '.pkgvalue').val('yes');
-        }
+
         if ($('#tmux')[0].checked) {
             $('#ncurses-terminfo').switchButton({checked: true});
             $('#ncurses-terminfo', '.pkgvalue').val('yes');
@@ -192,10 +187,10 @@ function checkDepends() {
             $('#utf8proc').switchButton({checked: true});
             $('#utf8proc', '.pkgvalue').val('yes');
         }
+        
     } catch (error) {
         console.error(error);
         // expected output: ReferenceError: nonExistentFunction is not defined
         // Note - error messages will vary depending on browser
     }
-  
 }
