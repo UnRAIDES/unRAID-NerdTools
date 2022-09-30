@@ -168,14 +168,6 @@
         "type": "file"
     },
     {
-        "name": "vnstat-2.1-x86_64-1.txz",
-        "path": "packages/6.11/vnstat-2.1-x86_64-1.txz",
-        "sha": "7d4549632abb82f0b9c86985ea2a1c1d938ef08d",
-        "size": 93656,
-        "download_url": "https://raw.githubusercontent.com/UnRAIDES/unRAID-NerdTools/main/packages/6.11/vnstat-2.1-x86_64-1.txz",
-        "type": "file"
-    },
-    {
         "name": "zsh-5.8-x86_64-3.txz",
         "path": "packages/6.11/zsh-5.8-x86_64-3.txz",
         "sha": "63ab9b0d4888db77f54fcf6f6c84e6e04aea5fd8",
