@@ -32,14 +32,6 @@
         "type": "file"
     },
     {
-        "name": "iperf3-3.9-x86_64-1cf.txz",
-        "path": "packages/6.11/iperf3-3.9-x86_64-1cf.txz",
-        "sha": "3322e24c68f916bd3948eb6e88863702d6c2d453",
-        "size": 86108,
-        "download_url": "https://raw.githubusercontent.com/UnRAIDES/unRAID-NerdTools/main/packages/6.11/iperf3-3.9-x86_64-1cf.txz",
-        "type": "file"
-    },
-    {
         "name": "irssi-1.2.3-x86_64-2.txz",
         "path": "packages/6.11/irssi-1.2.3-x86_64-2.txz",
         "sha": "749c8b09f9cc52f7dc52e7888e8c2d522e0668d7",
