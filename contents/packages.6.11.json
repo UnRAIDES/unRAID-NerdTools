@@ -4,7 +4,7 @@
         "path": "packages/6.11/axel-2.4-x86_64-2_slonly.txz",
         "sha": "4a95098164a748c8e697258b8a5eca3eec9be61a",
         "size": 44160,
-        "download_url": "https://raw.githubusercontent.com/jsavargas/unRAID-NerdTools/2022.09.28/packages/6.11/axel-2.4-x86_64-2_slonly.txz",
+        "download_url": "https://raw.githubusercontent.com/UnRAIDES/unRAID-NerdTools/main/packages/6.11/axel-2.4-x86_64-2_slonly.txz",
         "type": "file"
     },
     {
@@ -12,7 +12,7 @@
         "path": "packages/6.11/borgbackup-1.1.15-x86_64-1.txz",
         "sha": "9379fa8c6b57bbfff180b68a78cacb341c3afe16",
         "size": 4169268,
-        "download_url": "https://raw.githubusercontent.com/jsavargas/unRAID-NerdTools/2022.09.28/packages/6.11/borgbackup-1.1.15-x86_64-1.txz",
+        "download_url": "https://raw.githubusercontent.com/UnRAIDES/unRAID-NerdTools/main/packages/6.11/borgbackup-1.1.15-x86_64-1.txz",
         "type": "file"
     },
     {
@@ -20,7 +20,7 @@
         "path": "packages/6.11/fdupes-1.51-x86_64-3_slack.txz",
         "sha": "812721209a7d3757556247edb70889e1f104db54",
         "size": 17484,
-        "download_url": "https://raw.githubusercontent.com/jsavargas/unRAID-NerdTools/2022.09.28/packages/6.11/fdupes-1.51-x86_64-3_slack.txz",
+        "download_url": "https://raw.githubusercontent.com/UnRAIDES/unRAID-NerdTools/main/packages/6.11/fdupes-1.51-x86_64-3_slack.txz",
         "type": "file"
     },
     {
@@ -28,7 +28,7 @@
         "path": "packages/6.11/fzf-0.20.0-x86_64-3_slonly.txz",
         "sha": "b0885addf4b23557fc82ba7c2a69fc0a0a82a144",
         "size": 901728,
-        "download_url": "https://raw.githubusercontent.com/jsavargas/unRAID-NerdTools/2022.09.28/packages/6.11/fzf-0.20.0-x86_64-3_slonly.txz",
+        "download_url": "https://raw.githubusercontent.com/UnRAIDES/unRAID-NerdTools/main/packages/6.11/fzf-0.20.0-x86_64-3_slonly.txz",
         "type": "file"
     },
     {
@@ -36,7 +36,7 @@
         "path": "packages/6.11/iperf3-3.9-x86_64-1cf.txz",
         "sha": "3322e24c68f916bd3948eb6e88863702d6c2d453",
         "size": 86108,
-        "download_url": "https://raw.githubusercontent.com/jsavargas/unRAID-NerdTools/2022.09.28/packages/6.11/iperf3-3.9-x86_64-1cf.txz",
+        "download_url": "https://raw.githubusercontent.com/UnRAIDES/unRAID-NerdTools/main/packages/6.11/iperf3-3.9-x86_64-1cf.txz",
         "type": "file"
     },
     {
@@ -44,7 +44,7 @@
         "path": "packages/6.11/irssi-1.2.3-x86_64-2.txz",
         "sha": "749c8b09f9cc52f7dc52e7888e8c2d522e0668d7",
         "size": 654900,
-        "download_url": "https://raw.githubusercontent.com/jsavargas/unRAID-NerdTools/2022.09.28/packages/6.11/irssi-1.2.3-x86_64-2.txz",
+        "download_url": "https://raw.githubusercontent.com/UnRAIDES/unRAID-NerdTools/main/packages/6.11/irssi-1.2.3-x86_64-2.txz",
         "type": "file"
     },
     {
@@ -52,7 +52,7 @@
         "path": "packages/6.11/jdupes-1.19.1-x86_64-1_SBo.txz",
         "sha": "5c819c752cfa0065779bdec0506eaeb96afe116e",
         "size": 45560,
-        "download_url": "https://raw.githubusercontent.com/jsavargas/unRAID-NerdTools/2022.09.28/packages/6.11/jdupes-1.19.1-x86_64-1_SBo.txz",
+        "download_url": "https://raw.githubusercontent.com/UnRAIDES/unRAID-NerdTools/main/packages/6.11/jdupes-1.19.1-x86_64-1_SBo.txz",
         "type": "file"
     },
     {
@@ -60,7 +60,7 @@
         "path": "packages/6.11/mediainfo-19.09-x86_64-1_SBo.txz",
         "sha": "7dd4e5a74f65d3582b40244fbf91eaa1866fa34d",
         "size": 68712,
-        "download_url": "https://raw.githubusercontent.com/jsavargas/unRAID-NerdTools/2022.09.28/packages/6.11/mediainfo-19.09-x86_64-1_SBo.txz",
+        "download_url": "https://raw.githubusercontent.com/UnRAIDES/unRAID-NerdTools/main/packages/6.11/mediainfo-19.09-x86_64-1_SBo.txz",
         "type": "file"
     },
     {
@@ -68,7 +68,7 @@
         "path": "packages/6.11/mktorrent-1.1-x86_64-1.txz",
         "sha": "cbe8bcadfe36e7e34c51b7df454b07ec5762f60e",
         "size": 18116,
-        "download_url": "https://raw.githubusercontent.com/jsavargas/unRAID-NerdTools/2022.09.28/packages/6.11/mktorrent-1.1-x86_64-1.txz",
+        "download_url": "https://raw.githubusercontent.com/UnRAIDES/unRAID-NerdTools/main/packages/6.11/mktorrent-1.1-x86_64-1.txz",
         "type": "file"
     },
     {
@@ -76,7 +76,7 @@
         "path": "packages/6.11/ncdu-1.17-x86_64-1gds.txz",
         "sha": "4c2f4665343cdaa00f40b097a343b3c09c92d03b",
         "size": 47188,
-        "download_url": "https://raw.githubusercontent.com/jsavargas/unRAID-NerdTools/2022.09.28/packages/6.11/ncdu-1.17-x86_64-1gds.txz",
+        "download_url": "https://raw.githubusercontent.com/UnRAIDES/unRAID-NerdTools/main/packages/6.11/ncdu-1.17-x86_64-1gds.txz",
         "type": "file"
     },
     {
@@ -84,7 +84,7 @@
         "path": "packages/6.11/neofetch-20211210-noarch-1.txz",
         "sha": "dc559e2a99a5ef9443b5bb40b35f69eb3797ee9f",
         "size": 89584,
-        "download_url": "https://raw.githubusercontent.com/jsavargas/unRAID-NerdTools/2022.09.28/packages/6.11/neofetch-20211210-noarch-1.txz",
+        "download_url": "https://raw.githubusercontent.com/UnRAIDES/unRAID-NerdTools/main/packages/6.11/neofetch-20211210-noarch-1.txz",
         "type": "file"
     },
     {
@@ -92,7 +92,7 @@
         "path": "packages/6.11/nload-0.7.4-x86_64-1_slack.txz",
         "sha": "163badb089b8924c1d0b0471c66ab79d5fe52164",
         "size": 59996,
-        "download_url": "https://raw.githubusercontent.com/jsavargas/unRAID-NerdTools/2022.09.28/packages/6.11/nload-0.7.4-x86_64-1_slack.txz",
+        "download_url": "https://raw.githubusercontent.com/UnRAIDES/unRAID-NerdTools/main/packages/6.11/nload-0.7.4-x86_64-1_slack.txz",
         "type": "file"
     },
     {
@@ -100,7 +100,7 @@
         "path": "packages/6.11/p7zip-16.02-x86_64-1sl.txz",
         "sha": "efb97a9f688f6179439b79711462c73e086b258a",
         "size": 1285484,
-        "download_url": "https://raw.githubusercontent.com/jsavargas/unRAID-NerdTools/2022.09.28/packages/6.11/p7zip-16.02-x86_64-1sl.txz",
+        "download_url": "https://raw.githubusercontent.com/UnRAIDES/unRAID-NerdTools/main/packages/6.11/p7zip-16.02-x86_64-1sl.txz",
         "type": "file"
     },
     {
@@ -108,7 +108,7 @@
         "path": "packages/6.11/python2-2.7.18-x86_64-4.txz",
         "sha": "4f1e65a1c8898aa3c59c5f960d92c7abdd51bc88",
         "size": 13018740,
-        "download_url": "https://raw.githubusercontent.com/jsavargas/unRAID-NerdTools/2022.09.28/packages/6.11/python2-2.7.18-x86_64-4.txz",
+        "download_url": "https://raw.githubusercontent.com/UnRAIDES/unRAID-NerdTools/main/packages/6.11/python2-2.7.18-x86_64-4.txz",
         "type": "file"
     },
     {
@@ -116,7 +116,7 @@
         "path": "packages/6.11/python3-3.9.10-x86_64-1.txz",
         "sha": "77658849776e0220efa46a63a3f1f0d23c7294ca",
         "size": 18538524,
-        "download_url": "https://raw.githubusercontent.com/jsavargas/unRAID-NerdTools/2022.09.28/packages/6.11/python3-3.9.10-x86_64-1.txz",
+        "download_url": "https://raw.githubusercontent.com/UnRAIDES/unRAID-NerdTools/main/packages/6.11/python3-3.9.10-x86_64-1.txz",
         "type": "file"
     },
     {
@@ -124,7 +124,7 @@
         "path": "packages/6.11/python-pip-21.3.1-x86_64-2.txz",
         "sha": "81d362d40980146d544608a1d71bdad3efd94304",
         "size": 1809344,
-        "download_url": "https://raw.githubusercontent.com/jsavargas/unRAID-NerdTools/2022.09.28/packages/6.11/python-pip-21.3.1-x86_64-2.txz",
+        "download_url": "https://raw.githubusercontent.com/UnRAIDES/unRAID-NerdTools/main/packages/6.11/python-pip-21.3.1-x86_64-2.txz",
         "type": "file"
     },
     {
@@ -132,7 +132,7 @@
         "path": "packages/6.11/python-setuptools-57.4.0-x86_64-1.txz",
         "sha": "c1a53a2c9babc2ea778bc14cb743b2dae5656ac9",
         "size": 673896,
-        "download_url": "https://raw.githubusercontent.com/jsavargas/unRAID-NerdTools/2022.09.28/packages/6.11/python-setuptools-57.4.0-x86_64-1.txz",
+        "download_url": "https://raw.githubusercontent.com/UnRAIDES/unRAID-NerdTools/main/packages/6.11/python-setuptools-57.4.0-x86_64-1.txz",
         "type": "file"
     },
     {
@@ -140,7 +140,7 @@
         "path": "packages/6.11/rar-5.8.1-x86_64-1_SBo.txz",
         "sha": "be3b78ce6cb78a16dadad71b665e760b273fde17",
         "size": 290256,
-        "download_url": "https://raw.githubusercontent.com/jsavargas/unRAID-NerdTools/2022.09.28/packages/6.11/rar-5.8.1-x86_64-1_SBo.txz",
+        "download_url": "https://raw.githubusercontent.com/UnRAIDES/unRAID-NerdTools/main/packages/6.11/rar-5.8.1-x86_64-1_SBo.txz",
         "type": "file"
     },
     {
@@ -148,7 +148,7 @@
         "path": "packages/6.11/screen-4.9.0-x86_64-1.txz",
         "sha": "c8cc719bee582d4bcca1c06ec988a8f787e807a9",
         "size": 550196,
-        "download_url": "https://raw.githubusercontent.com/jsavargas/unRAID-NerdTools/2022.09.28/packages/6.11/screen-4.9.0-x86_64-1.txz",
+        "download_url": "https://raw.githubusercontent.com/UnRAIDES/unRAID-NerdTools/main/packages/6.11/screen-4.9.0-x86_64-1.txz",
         "type": "file"
     },
     {
@@ -156,7 +156,7 @@
         "path": "packages/6.11/tmux-3.2-x86_64-1.txz",
         "sha": "a6e16326da7d6a12524a667679e39f8dd9c74ffe",
         "size": 366896,
-        "download_url": "https://raw.githubusercontent.com/jsavargas/unRAID-NerdTools/2022.09.28/packages/6.11/tmux-3.2-x86_64-1.txz",
+        "download_url": "https://raw.githubusercontent.com/UnRAIDES/unRAID-NerdTools/main/packages/6.11/tmux-3.2-x86_64-1.txz",
         "type": "file"
     },
     {
@@ -164,7 +164,7 @@
         "path": "packages/6.11/unrar-5.8.5-x86_64-1_SBo.txz",
         "sha": "56af0812f15bd83e387398402a2107723f1c364e",
         "size": 347692,
-        "download_url": "https://raw.githubusercontent.com/jsavargas/unRAID-NerdTools/2022.09.28/packages/6.11/unrar-5.8.5-x86_64-1_SBo.txz",
+        "download_url": "https://raw.githubusercontent.com/UnRAIDES/unRAID-NerdTools/main/packages/6.11/unrar-5.8.5-x86_64-1_SBo.txz",
         "type": "file"
     },
     {
@@ -172,7 +172,7 @@
         "path": "packages/6.11/utf8proc-2.7.0-x86_64-1.txz",
         "sha": "a4f8d1725afd0feb4ccf65c528eebbd040d0faeb",
         "size": 63420,
-        "download_url": "https://raw.githubusercontent.com/jsavargas/unRAID-NerdTools/2022.09.28/packages/6.11/utf8proc-2.7.0-x86_64-1.txz",
+        "download_url": "https://raw.githubusercontent.com/UnRAIDES/unRAID-NerdTools/main/packages/6.11/utf8proc-2.7.0-x86_64-1.txz",
         "type": "file"
     },
     {
@@ -180,7 +180,7 @@
         "path": "packages/6.11/vnstat-2.1-x86_64-1.txz",
         "sha": "7d4549632abb82f0b9c86985ea2a1c1d938ef08d",
         "size": 93656,
-        "download_url": "https://raw.githubusercontent.com/jsavargas/unRAID-NerdTools/2022.09.28/packages/6.11/vnstat-2.1-x86_64-1.txz",
+        "download_url": "https://raw.githubusercontent.com/UnRAIDES/unRAID-NerdTools/main/packages/6.11/vnstat-2.1-x86_64-1.txz",
         "type": "file"
     },
     {
@@ -188,7 +188,7 @@
         "path": "packages/6.11/zsh-5.8-x86_64-3.txz",
         "sha": "63ab9b0d4888db77f54fcf6f6c84e6e04aea5fd8",
         "size": 3056824,
-        "download_url": "https://raw.githubusercontent.com/jsavargas/unRAID-NerdTools/2022.09.28/packages/6.11/zsh-5.8-x86_64-3.txz",
+        "download_url": "https://raw.githubusercontent.com/UnRAIDES/unRAID-NerdTools/main/packages/6.11/zsh-5.8-x86_64-3.txz",
         "type": "file"
     },
     {
@@ -196,7 +196,7 @@
         "path": "packages/6.11/iotop-0.6-x86_64-1_fs.tgz",
         "sha": "fdfe9270c20d923ef5af2ec09de25918575fa12c",
         "size": 50268,
-        "download_url": "https://raw.githubusercontent.com/jsavargas/unRAID-NerdTools/2022.09.28/packages/6.11/iotop-0.6-x86_64-1_fs.tgz",
+        "download_url": "https://raw.githubusercontent.com/UnRAIDES/unRAID-NerdTools/main/packages/6.11/iotop-0.6-x86_64-1_fs.tgz",
         "type": "file"
     }
 ]
