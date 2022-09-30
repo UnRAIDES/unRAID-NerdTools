@@ -1,0 +1,110 @@
+<?xml version='1.0' standalone='yes'?>
+
+<!DOCTYPE PLUGIN [
+<!ENTITY name      "NerdTools">
+<!ENTITY author    "UnRAIDES">
+<!ENTITY version   "2022.09.29o">
+<!ENTITY md5       "981f8ecf4e378aaf5e4ef89e09eac5d2">
+<!ENTITY launch    "Settings/&name;">
+<!ENTITY github    "UnRAIDES/unRAID-&name;">
+<!ENTITY pluginURL "https://raw.githubusercontent.com/&github;/main/plugin/&name;.plg">
+<!ENTITY plgPATH   "/boot/config/plugins/&name;">
+<!ENTITY plgNAME   "&name;-&version;-x86_64-1">
+<!ENTITY emhttp    "/usr/local/emhttp/plugins/&name;">
+]>
+
+<PLUGIN name="&name;" author="&author;" version="&version;" launch="&launch;" pluginURL="&pluginURL;" min="6.11">
+
+<CHANGES>
+##&name;
+###2022.09.27a
+- Fix tip on packages-desc
+- Update zsh to the version 5.8-3
+- Update python3 to the version 3.9.10
+###2022.09.27
+- New maintainer UnRAIDES team
+- Fix various problem with UnRAID 6.11 - WIP 
+- Update vim to the version 9.0.0417
+- Add dependency libsodium for new version of vim package
+- Update irssi to the version 1.2.3
+- Add dependency utf8proc for new version of irssi package
+
+</CHANGES>
+
+<!-- The 'pre-install' script. -->
+<FILE Run="/usr/bin/php">
+<INLINE>
+<![CDATA[
+<?
+  $version = parse_ini_file("/etc/unraid-version");
+  
+  if ( version_compare($version['version'],"6.11", "<") )
+  {
+    echo "**********************************************************************\n";
+    echo "\n";
+    echo "NerdTools Requires Unraid version 6.11.0 or greater to run\n";
+    echo "\n";
+    echo "**********************************************************************\n";
+    exit(1);
+  }
+	
+?>
+]]>
+</INLINE>
+</FILE>
+
+<FILE Run="/bin/bash">
+<INLINE>
+# Remove old 'source' files
+rm -f $(ls /boot/config/plugins/&name;/&name;*.txz 2>/dev/null &#124; grep -v '&version;')
+</INLINE>
+</FILE>
+
+
+
+<!--
+The 'install' script.
+-->
+<FILE Run="/bin/bash" Method="install">
+<INLINE>
+
+echo ""
+echo "-----------------------------------------------------------"
+echo " &name; has been installed."
+echo ""
+echo " Copyright 2022, &author;"
+echo " Copyright 2016-2021, dmacias72, eschultz"
+echo " Version: &version;"
+echo "-----------------------------------------------------------"
+echo ""
+</INLINE>
+</FILE>
+
+
+<FILE Name="/boot/config/plugins/&name;/&name;-&version;-x86_64-1.txz" Run="upgradepkg --install-new --reinstall">
+<URL>https://raw.githubusercontent.com/jsavargas/unRAID-&name;/2022.09.28/archive/&name;-&version;-x86_64-1.txz</URL>
+<MD5>&md5;</MD5>
+</FILE>
+
+<!--
+The 'remove' script.
+-->
+<FILE Run="/bin/bash" Method="remove">
+<INLINE>
+
+removepkg &plgPATH;/&plgNAME;.txz
+rm -rf &emhttp;
+rm -f &plgPATH;/&plgNAME;.txz
+
+echo ""
+echo "-----------------------------------------------------------"
+echo " &name; has been removed."
+echo " Copyright 2016-2021, dmacias72, eschultz"
+echo " Copyright 2022, &author;"
+echo " Version: &version;"
+echo "-----------------------------------------------------------"
+echo ""
+</INLINE>
+</FILE>
+
+</PLUGIN>

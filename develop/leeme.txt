@@ -1,0 +1,13 @@
+# Generador de json por version
+
+php create.json.php 6.11 > ../contents/packages.6.11.json
+
+
+# Generador de version de plugin
+
+ejemplos:
+    ./create.new.version.sh
+    ./create.new.version.sh a
+    ./create.new.version.sh b
+
+

@@ -1,0 +1,82 @@
+[
+    {
+        "name": "ncdu-1.17-x86_64-1gds.txz",
+        "path": "packages/6.11/ncdu-1.17-x86_64-1gds.txz",
+        "sha": "4c2f4665343cdaa00f40b097a343b3c09c92d03b",
+        "size": 47188,
+        "download_url": "https://raw.githubusercontent.com/jsavargas/unRAID-NerdTools/2022.09.28/packages/6.11/ncdu-1.17-x86_64-1gds.txz",
+        "type": "file"
+    },
+    {
+        "name": "neofetch-20211210-noarch-1.txz",
+        "path": "packages/6.11/neofetch-20211210-noarch-1.txz",
+        "sha": "dc559e2a99a5ef9443b5bb40b35f69eb3797ee9f",
+        "size": 89584,
+        "download_url": "https://raw.githubusercontent.com/jsavargas/unRAID-NerdTools/2022.09.28/packages/6.11/neofetch-20211210-noarch-1.txz",
+        "type": "file"
+    },
+    {
+        "name": "p7zip-16.02-x86_64-1sl.txz",
+        "path": "packages/6.11/p7zip-16.02-x86_64-1sl.txz",
+        "sha": "efb97a9f688f6179439b79711462c73e086b258a",
+        "size": 1285484,
+        "download_url": "https://raw.githubusercontent.com/jsavargas/unRAID-NerdTools/2022.09.28/packages/6.11/p7zip-16.02-x86_64-1sl.txz",
+        "type": "file"
+    },
+    {
+        "name": "python2-2.7.18-x86_64-4.txz",
+        "path": "packages/6.11/python2-2.7.18-x86_64-4.txz",
+        "sha": "4f1e65a1c8898aa3c59c5f960d92c7abdd51bc88",
+        "size": 13018740,
+        "download_url": "https://raw.githubusercontent.com/jsavargas/unRAID-NerdTools/2022.09.28/packages/6.11/python2-2.7.18-x86_64-4.txz",
+        "type": "file"
+    },
+    {
+        "name": "python3-3.9.10-x86_64-1.txz",
+        "path": "packages/6.11/python3-3.9.10-x86_64-1.txz",
+        "sha": "77658849776e0220efa46a63a3f1f0d23c7294ca",
+        "size": 18538524,
+        "download_url": "https://raw.githubusercontent.com/jsavargas/unRAID-NerdTools/2022.09.28/packages/6.11/python3-3.9.10-x86_64-1.txz",
+        "type": "file"
+    },
+    {
+        "name": "python-pip-21.2.3-x86_64-1.txz",
+        "path": "packages/6.11/python-pip-21.2.3-x86_64-1.txz",
+        "sha": "84edb72ccd929d966b54f0e7c98139020e657f9d",
+        "size": 1761948,
+        "download_url": "https://raw.githubusercontent.com/jsavargas/unRAID-NerdTools/2022.09.28/packages/6.11/python-pip-21.2.3-x86_64-1.txz",
+        "type": "file"
+    },
+    {
+        "name": "python-setuptools-57.4.0-x86_64-1.txz",
+        "path": "packages/6.11/python-setuptools-57.4.0-x86_64-1.txz",
+        "sha": "c1a53a2c9babc2ea778bc14cb743b2dae5656ac9",
+        "size": 673896,
+        "download_url": "https://raw.githubusercontent.com/jsavargas/unRAID-NerdTools/2022.09.28/packages/6.11/python-setuptools-57.4.0-x86_64-1.txz",
+        "type": "file"
+    },
+    {
+        "name": "screen-4.9.0-x86_64-1.txz",
+        "path": "packages/6.11/screen-4.9.0-x86_64-1.txz",
+        "sha": "c8cc719bee582d4bcca1c06ec988a8f787e807a9",
+        "size": 550196,
+        "download_url": "https://raw.githubusercontent.com/jsavargas/unRAID-NerdTools/2022.09.28/packages/6.11/screen-4.9.0-x86_64-1.txz",
+        "type": "file"
+    },
+    {
+        "name": "tmux-3.2-x86_64-1.txz",
+        "path": "packages/6.11/tmux-3.2-x86_64-1.txz",
+        "sha": "a6e16326da7d6a12524a667679e39f8dd9c74ffe",
+        "size": 366896,
+        "download_url": "https://raw.githubusercontent.com/jsavargas/unRAID-NerdTools/2022.09.28/packages/6.11/tmux-3.2-x86_64-1.txz",
+        "type": "file"
+    },
+    {
+        "name": "zsh-5.8-x86_64-3.txz",
+        "path": "packages/6.11/zsh-5.8-x86_64-3.txz",
+        "sha": "63ab9b0d4888db77f54fcf6f6c84e6e04aea5fd8",
+        "size": 3056824,
+        "download_url": "https://raw.githubusercontent.com/jsavargas/unRAID-NerdTools/2022.09.28/packages/6.11/zsh-5.8-x86_64-3.txz",
+        "type": "file"
+    }
+]
