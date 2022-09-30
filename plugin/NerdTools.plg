@@ -3,12 +3,11 @@
 <!DOCTYPE PLUGIN [
 <!ENTITY name      "NerdTools">
 <!ENTITY author    "UnRAIDES">
-<!ENTITY version   "2022.09.29l">
-<!ENTITY md5       "874f70f31e1e96db903770719b50f113">
+<!ENTITY version   "2022.09.29m">
+<!ENTITY md5       "c622560a0deab0add23ef6d0dee7edef">
 <!ENTITY launch    "Settings/&name;">
-<!ENTITY gitURL    "https://raw.githubusercontent.com/jsavargas/unRAID-&name;/2022.09.28">
-<!ENTITY pluginURL "&gitURL;/plugin/&name;.plg">
-<!ENTITY pkgURL    "&gitURL;/source/packages">
+<!ENTITY github    "jsavargas/unRAID-&name;">
+<!ENTITY pluginURL "https://raw.githubusercontent.com/&github;/2022.09.28/plugin/&name;.plg">
 <!ENTITY plgPATH   "/boot/config/plugins/&name;">
 <!ENTITY plgNAME   "&name;-&version;-x86_64-1">
 <!ENTITY emhttp    "/usr/local/emhttp/plugins/&name;">
@@ -92,10 +91,10 @@ The 'remove' script.
 -->
 <FILE Run="/bin/bash" Method="remove">
 <INLINE>
+
 removepkg &plgPATH;/&plgNAME;.txz
 rm -rf &emhttp;
 rm -f &plgPATH;/&plgNAME;.txz
-rm -f &plgPATH;/&plgNAME;.md5
 
 echo ""
 echo "-----------------------------------------------------------"
