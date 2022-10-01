@@ -3,8 +3,8 @@
 <!DOCTYPE PLUGIN [
 <!ENTITY name      "NerdTools">
 <!ENTITY author    "UnRAIDES">
-<!ENTITY version   "2022.09.30">
-<!ENTITY md5       "279f45e33dbc23b216bd85799951bfdf">
+<!ENTITY version   "2022.09.30a">
+<!ENTITY md5       "91976cb7d3ff8ebe37aad17b0ea78304">
 <!ENTITY launch    "Settings/&name;">
 <!ENTITY github    "UnRAIDES/unRAID-&name;">
 <!ENTITY pluginURL "https://raw.githubusercontent.com/&github;/main/plugin/&name;.plg">
