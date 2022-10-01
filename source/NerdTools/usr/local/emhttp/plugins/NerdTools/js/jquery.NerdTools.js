@@ -47,7 +47,8 @@ $(function(){
 
     $('#btnApply').click(Apply);
 
-    packageQuery();
+    var url = window.location.href.split("?");
+    packageQuery(url[1]);
 });
 
 //list all available packages in a table
@@ -158,39 +159,56 @@ function Apply() {
 
 function checkDepends() {
     try {
-
+        
         if ($('#tmux')[0].checked) {
-            $('#ncurses-terminfo').switchButton({checked: true});
+            $('#ncurses-terminfo').switchButton({ checked: true });
             $('#ncurses-terminfo', '.pkgvalue').val('yes');
         }
-        if ($('#expect')[0].checked) {
-            $('#tcl').switchButton({checked: true});
-            $('#tcl', '.pkgvalue').val('yes');
-        }
-        if ($('#iotop')[0].checked) {
-            $('#python2').switchButton({checked: true});
-            $('#python2', '.pkgvalue').val('yes');
-        }
-        if ($('#vim')[0].checked) {
-            $('#libsodium').switchButton({checked: true});
-            $('#libsodium', '.pkgvalue').val('yes');
-        }
-        if ($('#borgbackup')[0].checked) {
-            $('#python3').switchButton({checked: true});
-            $('#python3', '.pkgvalue').val('yes');
-            $('#python-setuptools').switchButton({checked: true});
-            $('#python-setuptools', '.pkgvalue').val('yes');
-            $('#llfuse').switchButton({checked: true});
-            $('#llfuse', '.pkgvalue').val('yes');
-        }
-        if ($('#irssi')[0].checked) {
-            $('#utf8proc').switchButton({checked: true});
-            $('#utf8proc', '.pkgvalue').val('yes');
-        }
-        
     } catch (error) {
         console.error(error);
-        // expected output: ReferenceError: nonExistentFunction is not defined
-        // Note - error messages will vary depending on browser
+    }
+    try {
+        if ($('#expect')[0].checked) {
+            $('#tcl').switchButton({ checked: true });
+            $('#tcl', '.pkgvalue').val('yes');
+        }
+    } catch (error) {
+        console.error(error);
+    }
+    try {
+        if ($('#iotop')[0].checked) {
+            $('#python2').switchButton({ checked: true });
+            $('#python2', '.pkgvalue').val('yes');
+        }
+    } catch (error) {
+        console.error(error);
+    }
+    try {
+        if ($('#vim')[0].checked) {
+            $('#libsodium').switchButton({ checked: true });
+            $('#libsodium', '.pkgvalue').val('yes');
+        }
+    } catch (error) {
+        console.error(error);
+    }
+    try {
+        if ($('#borgbackup')[0].checked) {
+            $('#python3').switchButton({ checked: true });
+            $('#python3', '.pkgvalue').val('yes');
+            $('#python-setuptools').switchButton({ checked: true });
+            $('#python-setuptools', '.pkgvalue').val('yes');
+            $('#llfuse').switchButton({ checked: true });
+            $('#llfuse', '.pkgvalue').val('yes');
+        }
+    } catch (error) {
+        console.error(error);
+    }
+    try {
+        if ($('#irssi')[0].checked) {
+            $('#utf8proc').switchButton({ checked: true });
+            $('#utf8proc', '.pkgvalue').val('yes');
+        }
+    } catch (error) {
+        console.error(error);
     }
 }
