@@ -48,6 +48,14 @@
         "type": "file"
     },
     {
+        "name": "libmediainfo-19.09-x86_64-1_SBo.txz",
+        "path": "packages/6.11/libmediainfo-19.09-x86_64-1_SBo.txz",
+        "sha": "a8efcd09519097b6d53c80d8db0d1fd30e9200ba",
+        "size": 2359380,
+        "download_url": "https://raw.githubusercontent.com/UnRAIDES/unRAID-NerdTools/main/packages/6.11/libmediainfo-19.09-x86_64-1_SBo.txz",
+        "type": "file"
+    },
+    {
         "name": "mediainfo-19.09-x86_64-1_SBo.txz",
         "path": "packages/6.11/mediainfo-19.09-x86_64-1_SBo.txz",
         "sha": "7dd4e5a74f65d3582b40244fbf91eaa1866fa34d",
