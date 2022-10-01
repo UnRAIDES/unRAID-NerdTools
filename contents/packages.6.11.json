@@ -56,6 +56,14 @@
         "type": "file"
     },
     {
+        "name": "libzen-0.4.37-x86_64-1_SBo.txz",
+        "path": "packages/6.11/libzen-0.4.37-x86_64-1_SBo.txz",
+        "sha": "fe1b1a207f3dd30710f7e2e6b3838388d0a229bb",
+        "size": 366184,
+        "download_url": "https://raw.githubusercontent.com/UnRAIDES/unRAID-NerdTools/main/packages/6.11/libzen-0.4.37-x86_64-1_SBo.txz",
+        "type": "file"
+    },
+    {
         "name": "mediainfo-19.09-x86_64-1_SBo.txz",
         "path": "packages/6.11/mediainfo-19.09-x86_64-1_SBo.txz",
         "sha": "7dd4e5a74f65d3582b40244fbf91eaa1866fa34d",
