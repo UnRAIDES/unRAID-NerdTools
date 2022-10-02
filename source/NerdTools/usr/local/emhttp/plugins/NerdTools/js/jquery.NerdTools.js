@@ -18,33 +18,9 @@ $(function(){
             }
         }
     });
-
-    // "uninstall package" switch and cookie
-    $('.uninstallpkg')
-        .switchButton({
-            labels_placement: 'right',
-            on_label: 'unInstall',
-            off_label: 'unInstall',
-            checked: $.cookie('nerdpack_packages_uninstall') == '--uninstall'
-        })
-        .change(function () {
-            $.cookie('nerdpack_packages_uninstall', $('.uninstallpkg')[0].checked ? '--uninstall' : '', { expires: 3650 });
-        });
-
-    // select all packages switch
-    $('.checkall')
-        .switchButton({
-            labels_placement: 'right',
-            on_label: 'Select All',
-            off_label: 'Select All',
-            checked: $.cookie('nerdpack_checkall') == 'yes'
-        })
-        .change(function () {
-            var myval = $(this)[0].checked;
-            $.cookie('nerdpack_checkall', myval ? 'yes' : 'no', { expires: 3650 });
-            $('#tblPackages tbody td:visible .pkgcheckbox').switchButton({checked: myval});
-        });
-
+ 
+    $.cookie('nerdpack_checkall', 'no', { expires: 3650 });
+    $.cookie('nerdpack_packages_uninstall', '--uninstall', { expires: 3650 });
     $('#btnApply').click(Apply);
 
     var url = window.location.href.split("?");
@@ -165,7 +141,7 @@ function checkDepends() {
             $('#ncurses-terminfo', '.pkgvalue').val('yes');
         }
     } catch (error) {
-        console.error(error);
+        console.error('Error checkDepends' + error);
     }
     try {
         if ($('#expect')[0].checked) {
@@ -173,7 +149,7 @@ function checkDepends() {
             $('#tcl', '.pkgvalue').val('yes');
         }
     } catch (error) {
-        console.error(error);
+        console.error('Error checkDepends' + error);
     }
     try {
         if ($('#iotop')[0].checked) {
@@ -181,7 +157,7 @@ function checkDepends() {
             $('#python2', '.pkgvalue').val('yes');
         }
     } catch (error) {
-        console.error(error);
+        console.error('Error checkDepends' + error);
     }
     try {
         if ($('#vim')[0].checked) {
@@ -189,7 +165,7 @@ function checkDepends() {
             $('#libsodium', '.pkgvalue').val('yes');
         }
     } catch (error) {
-        console.error(error);
+        console.error('Error checkDepends' + error);
     }
     try {
         if ($('#borgbackup')[0].checked) {
@@ -201,7 +177,7 @@ function checkDepends() {
             $('#llfuse', '.pkgvalue').val('yes');
         }
     } catch (error) {
-        console.error(error);
+        console.error('Error checkDepends' + error);
     }
     try {
         if ($('#irssi')[0].checked) {
@@ -209,6 +185,6 @@ function checkDepends() {
             $('#utf8proc', '.pkgvalue').val('yes');
         }
     } catch (error) {
-        console.error(error);
+        console.error('Error checkDepends' + error);
     }
 }
