@@ -1,6 +1,6 @@
 # unRAID-NerdTools
 [![](https://badgen.net/badge/icon/github?icon=github&label)](https://github.com/UnRAIDES/unRAID-NerdTools)
-[![](https://badgen.net/badge/icon/docker?icon=docker&label)](https://hub.docker.com/r/UnRAIDES/unRAID-NerdTools)
+[![](https://badgen.net/badge/icon/docker?icon=docker&label)](https://hub.docker.com/r/unraides)
 ![Github stars](https://badgen.net/github/stars/UnRAIDES/unRAID-NerdTools?icon=github&label=stars)
 ![Github forks](https://badgen.net/github/forks/UnRAIDES/unRAID-NerdTools?icon=github&label=forks)
 ![Github last-commit](https://img.shields.io/github/last-commit/UnRAIDES/unRAID-NerdTools)
