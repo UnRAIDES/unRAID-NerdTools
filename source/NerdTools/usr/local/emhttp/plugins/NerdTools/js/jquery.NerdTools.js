@@ -19,8 +19,8 @@ $(function(){
         }
     });
  
-    $.cookie('nerdpack_checkall', 'no', { expires: 3650 });
-    $.cookie('nerdpack_packages_uninstall', '--uninstall', { expires: 3650 });
+    $.cookie('nerdtools_checkall', 'no', { expires: 3650 });
+    $.cookie('nerdtools_packages_uninstall', '--uninstall', { expires: 3650 });
     $('#btnApply').click(Apply);
 
     var url = window.location.href.split("?");
@@ -125,7 +125,7 @@ function packageQuery(force) {
 
 function Apply() {
         checkDepends();
-        var Arg2 = (typeof $.cookie('nerdpack_packages_uninstall') === 'undefined') ? '' : '&arg2='+$.cookie('nerdpack_packages_uninstall');
+        var Arg2 = (typeof $.cookie('nerdtools_packages_uninstall') === 'undefined') ? '' : '&arg2='+$.cookie('nerdtools_packages_uninstall');
         $.post('/update.php', $('#package_form').serializeArray(), function() {
                 openBox('/plugins/NerdTools/scripts/packagemanager&arg1=--download'+ Arg2,
                             'Package Manager', 600, 900, true);
