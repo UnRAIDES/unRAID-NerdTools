@@ -3,8 +3,8 @@
 <!DOCTYPE PLUGIN [
 <!ENTITY name      "NerdTools">
 <!ENTITY author    "UnRAIDES">
-<!ENTITY version   "2022.10.01">
-<!ENTITY md5       "fe0de831dc037540cf55d9411721165b">
+<!ENTITY version   "2022.10.04b">
+<!ENTITY md5       "d0246bb614ac36b45f922c7b8e513941">
 <!ENTITY launch    "Settings/&name;">
 <!ENTITY github    "UnRAIDES/unRAID-&name;">
 <!ENTITY pluginURL "https://raw.githubusercontent.com/&github;/main/plugin/&name;.plg">
@@ -17,17 +17,22 @@
 
 <CHANGES>
 ##&name;
-###2022.09.27a
-- Fix tip on packages-desc
-- Update zsh to the version 5.8-3
-- Update python3 to the version 3.9.10
-###2022.09.27
-- New maintainer UnRAIDES team
-- Fix various problem with UnRAID 6.11 - WIP 
-- Update vim to the version 9.0.0417
-- Add dependency libsodium for new version of vim package
-- Update irssi to the version 1.2.3
-- Add dependency utf8proc for new version of irssi package
+###2022.10.04b
+- Minor change for developer tools
+###2022.10.04a
+- Clean old code
+- Delete old packages
+- Update unrar to the version 6.12
+- Update rar to the version 6.12
+- Update p7zip to the version 17.04
+- Update mediainfo to the version 22.06
+- Update dependency libzen to the version 0.4.39
+- Update dependency libmediainfo to the version 22.06
+###2022.10.04
+- Initial release
+- Plugin based on NerdPack of dmacias72
+- Cleaned code and deleted packages unused that are include on UnRAID 6.11
+- New system for install packages
 
 </CHANGES>
 
@@ -73,7 +78,7 @@ echo "-----------------------------------------------------------"
 echo " &name; has been installed."
 echo ""
 echo " Copyright 2022, &author;"
-echo " Copyright 2016-2021, dmacias72, eschultz"
+echo " Credits, based on NerdPack plugin of dmacias72, eschultz"
 echo " Version: &version;"
 echo "-----------------------------------------------------------"
 echo ""
@@ -99,8 +104,8 @@ rm -f &plgPATH;/&plgNAME;.txz
 echo ""
 echo "-----------------------------------------------------------"
 echo " &name; has been removed."
-echo " Copyright 2016-2021, dmacias72, eschultz"
 echo " Copyright 2022, &author;"
+echo " Credits, based on NerdPack plugin of dmacias72, eschultz"		
 echo " Version: &version;"
 echo "-----------------------------------------------------------"
 echo ""
