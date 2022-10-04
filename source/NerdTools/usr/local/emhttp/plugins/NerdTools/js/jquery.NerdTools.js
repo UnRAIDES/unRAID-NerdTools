@@ -187,4 +187,15 @@ function checkDepends() {
     } catch (error) {
         console.error('Error checkDepends' + error);
     }
+    try {
+        if ($('#mediainfo')[0].checked) {
+            $('#libzen').switchButton({ checked: true });
+            $('#libzen', '.pkgvalue').val('yes');
+            $('#libmediainfo').switchButton({ checked: true });
+            $('#libmediainfo', '.pkgvalue').val('yes');
+        }
+    } catch (error) {
+        console.error('Error checkDepends' + error);
+    }
 }
+
