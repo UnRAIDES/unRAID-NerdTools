@@ -8,23 +8,13 @@
 
 ![](images/logo.png)
 
-Install extra packages for advanced users.
+**Install and Uninstall extra packages easily.**
 
 
 ![](images/image01.png)
 
 
-## **Changelog:**
+##
 
-**2022.09.27a**
-- Fix tip on packages-desc
-- Update zsh to the version 5.8-3
-- Update python3 to the version 3.9.10
-
-**2022.09.27**
-- New maintainer UnRAIDES team
-- Fix various problem with UnRAID 6.11 - WIP 
-- Update vim to the version 9.0.0417
-- Add dependency libsodium for new version of vim package
-- Update irssi to the version 1.2.3
-- Add dependency utf8proc for new version of irssi package
+NerdTools is the new plugin that allows you to install additional packages in UnRAID easily.
+This project is based on the old NerdPack plugin but has received many improvements and important changes. For example the package installation now takes advantage of the benefits of UnRAID 6.11 and install packages in the path /boot/extra and delegating part of the management to the system itself.
