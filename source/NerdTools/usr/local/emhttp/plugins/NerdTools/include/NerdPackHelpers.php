@@ -12,7 +12,7 @@ if (!is_dir($pkg_extra_path))
     
 
 $pkg_desc = 'https://raw.githubusercontent.com/UnRAIDES/unRAID-NerdTools/main/contents/packages-desc';
-$pkg_repo = "https://raw.githubusercontent.com/UnRAIDES/unRAID-NerdTools/main/contents/packages.$os_version.json";
+$pkg_repo = "https://api.github.com/repos/UnRAIDES/unRAID-NerdTools/contents/packages/$os_version";
 
 $desc_file   = $pkg_path.'packages-desc';
 $repo_file   = $pkg_path.'packages.json';
