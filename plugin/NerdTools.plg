@@ -3,8 +3,8 @@
 <!DOCTYPE PLUGIN [
 <!ENTITY name      "NerdTools">
 <!ENTITY author    "UnRAIDES">
-<!ENTITY version   "2022.10.04d">
-<!ENTITY md5       "a2f0ab9b2e0ef61d36c41486727ed21e">
+<!ENTITY version   "2022.10.05">
+<!ENTITY md5       "e7e64da9ebf0f9028305bcb8fe11d858">
 <!ENTITY launch    "Settings/&name;">
 <!ENTITY github    "UnRAIDES/unRAID-&name;">
 <!ENTITY pluginURL "https://raw.githubusercontent.com/&github;/main/plugin/&name;.plg">
@@ -17,10 +17,12 @@
 
 <CHANGES>
 ##&name;
+###2022.10.05
+- Fix remove packages on uninstalling plugin
 ###2022.10.04d
 - Fix dependency for mediainfo package
-- Add vim-9.0.0623 package
-- Add libsodium-1.0.18 package as dependency of vim
+- Add vim package
+- Add libsodium package as dependency of vim
 - Update jdupes to the version 1.21
 ###2022.10.04c
 - Fix a bug with json file
@@ -107,6 +109,9 @@ The 'remove' script.
 removepkg &plgPATH;/&plgNAME;.txz
 rm -rf &emhttp;
 rm -f &plgPATH;/&plgNAME;.txz
+
+removepkg /boot/extra/*_nerdtools.txz 1>/dev/null
+rm -f /boot/exta/*_nerdtools.txz 1>/dev/null
 
 echo ""
 echo "-----------------------------------------------------------"
