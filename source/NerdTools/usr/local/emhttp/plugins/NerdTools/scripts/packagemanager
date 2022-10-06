@@ -128,7 +128,7 @@ foreach ($pkg_cfg as $pkg_name => $pkg_pref) { // get preferences for each packa
             logger("$pkg_name in use by another plugin, not uninstalled.",$argq);
         }else{
             $pkg_msg = 'Uninstalling and deleting';
-            $pkg_cmd = 'removepkg '.$pkg_extra_path.$pkg_name.'* 2>&1; rm '.$pkg_extra_path.$pkg_name.'* 2>&1';
+            $pkg_cmd = 'removepkg '.$pkg_extra_path.$pkg_name.'*_nerdtools.txz 2>&1; rm '.$pkg_extra_path.$pkg_name.'*_nerdtools.txz 2>&1';
         }
     }
 
@@ -155,8 +155,8 @@ foreach ($pkg_cfg as $pkg_name => $pkg_pref) { // get preferences for each packa
 }
 logger('Cleaning up packages...');
 
-$cmd = "find ".$pkg_extra_path." -type f ! -name 'packages.json' ! -name 'packages-desc'".$pkg_find." -delete 2>&1";
-shell_exec($cmd);
+#$cmd = "find ".$pkg_extra_path." -type f ! -name 'packages.json' ! -name 'packages-desc'".$pkg_find." -delete 2>&1";
+#shell_exec($cmd);
 
 logger('All packages processed...');
 
