@@ -4,7 +4,7 @@
 <!ENTITY name      "NerdTools">
 <!ENTITY author    "UnRAIDES">
 <!ENTITY version   "2022.10.06">
-<!ENTITY md5       "13ef1692a3259f149692fa213e39f5b1">
+<!ENTITY md5       "f2f6b8ed9614d694cbd37c2762fff3d8">
 <!ENTITY launch    "Settings/&name;">
 <!ENTITY github    "UnRAIDES/unRAID-&name;">
 <!ENTITY pluginURL "https://raw.githubusercontent.com/&github;/main/plugin/&name;.plg">
@@ -17,6 +17,8 @@
 
 <CHANGES>
 ##&name;
+###2022.10.06
+- Fix removal of user packages in /boot/extra
 ###2022.10.05
 - Fix remove packages on uninstalling plugin
 ###2022.10.04d
