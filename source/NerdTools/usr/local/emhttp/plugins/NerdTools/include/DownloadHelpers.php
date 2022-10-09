@@ -6,7 +6,7 @@ function get_file_from_url($file, $url) {
     $ch_vers = curl_version();
     curl_setopt($ch, CURLOPT_RETURNTRANSFER, 1);
     //curl_setopt($ch, CURLOPT_TIMEOUT, 3600);
-curl_setopt($ch, CURLOPT_NOPROGRESS, true);
+    curl_setopt($ch, CURLOPT_NOPROGRESS, true);
     curl_setopt($ch, CURLOPT_HEADER, 0);
     curl_setopt($ch, CURLOPT_USERAGENT, 'curl/'.$ch_vers['version']);
     //curl_setopt($ch, CURLOPT_PROGRESSFUNCTION, 'progress_bar');
