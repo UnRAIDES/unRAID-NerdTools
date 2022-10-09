@@ -71,7 +71,7 @@ foreach ($pkg_cfg as $pkg_name => $pkg_pref) { // get preferences for each packa
     $pkg_name    = str_replace('__', '.', $pkg_name); // replace "_" with "." in package names
     $pkg_pattern = '/^'.$pkg_name.'.-*/'; // search pattern for packages
     $pkg_patternd = '/^'.$pkg_name.'.*_nerdtools.*/'; // search pattern for packages
-    $pkg_install_status  = !empty(preg_grep($pkg_pattern, $pkgs_installed)); // check install status
+    $pkg_install_status  = !empty(preg_grep($pkg_patternd, $pkgs_installed)); // check install status
     $pkg_download_status = !empty(preg_grep($pkg_patternd, $pkgs_downloaded)); // check package download status
     $pkg_online_status   = !empty(preg_grep($pkg_pattern, $pkgs_github_array));
     $pkg_find .= " ! -name '".$pkg_name."*'";
@@ -122,8 +122,9 @@ foreach ($pkg_cfg as $pkg_name => $pkg_pref) { // get preferences for each packa
         }
 
         if (!$pkg_install_status) { // if package is not installed
+            //logger('upgradepkg --install-new --reinstall '.$pkg_extra_path.$pkg_name.'*_nerdtools.txz');
             $pkg_msg = 'Installing';
-            $pkg_cmd = 'upgradepkg --install-new '.$pkg_extra_path.$pkg_name.'*_nerdtools.txz 2>&1';
+            $pkg_cmd = 'upgradepkg --install-new --reinstall '.$pkg_extra_path.$pkg_name.'*_nerdtools.txz 2>&1';
         }
 
     } elseif ($pkg_pref == 'no' && $pkg_download_status && $argu) {

@@ -3,8 +3,8 @@
 <!DOCTYPE PLUGIN [
 <!ENTITY name      "NerdTools">
 <!ENTITY author    "UnRAIDES">
-<!ENTITY version   "2022.10.08">
-<!ENTITY md5       "ff03dec047f1f450025e046dcad18be9">
+<!ENTITY version   "2022.10.09">
+<!ENTITY md5       "fd33e7e4b1d1f2a95e2a30b3af2bea03">
 <!ENTITY launch    "Settings/&name;">
 <!ENTITY github    "UnRAIDES/unRAID-&name;">
 <!ENTITY pluginURL "https://raw.githubusercontent.com/&github;/main/plugin/&name;.plg">
@@ -17,6 +17,8 @@
 
 <CHANGES>
 ##&name;
+###2022.10.09
+- Fix reinstall packages
 ###2022.10.08
 - The plugins column is changed by the current version
 - The functionality to compare old versions is updated
