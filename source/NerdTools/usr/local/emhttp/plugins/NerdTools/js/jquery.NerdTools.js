@@ -41,7 +41,8 @@ function packageQuery(force) {
             var DownloadEQ = data.packages[i].downloadeq;
             var Installed  = data.packages[i].installed;
             var InstallEQ  = data.packages[i].installeq;
-            if (DownloadEQ == Downloaded && InstallEQ == Installed){
+            var updatePkg  = data.packages[i].updatePkg;
+            if (InstallEQ == Installed || !updatePkg){
                 if (Installed == "yes"){
                     if (Downloaded == "no")
                         Update = "<span ><i class='installed fa fa-check-circle'></i> installed</span>";
@@ -55,7 +56,7 @@ function packageQuery(force) {
                 Ready = true;
             }
 
-            if (DownloadEQ != Downloaded)
+            if (DownloadEQ != Downloaded && updatePkg)
                 Downloaded = 'old';
 
             var Checked = "";
@@ -70,7 +71,7 @@ function packageQuery(force) {
             "<td>"+data.packages[i].size+"</td>"+ // package size
             "<td>"+Downloaded+"</td>"+ // package downloaded
             "<td>"+Installed+"</td>"+ // package installed
-            "<td>"+data.packages[i].plugins+"</td>"+ // package dependents
+            "<td>"+data.packages[i].actualpkgv+"</td>"+ // package dependents
             "<td><input class='pkgcheckbox' id='"+data.packages[i].pkgname+"' type='checkbox' "+Checked+">"+
             "<input class='pkgvalue' type='hidden' id='"+data.packages[i].pkgname+"_value' name='"+data.packages[i].pkgnver+"' value='"+data.packages[i].config+"'></td>"+
             "</tr>");

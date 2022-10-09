@@ -30,7 +30,7 @@ foreach ($pkgs_github_array as $pkg_github) {
 
         $pkg_version = $pkg_nameArray[sizeof($pkg_nameArray) - 3]; // get package version
 
-        $pkg_nver    = $pkg_name.'-'.str_replace('.', '_', $pkg_version); // add underscored version to package name
+        $pkg_nver    = $pkg_name.'-'.str_replace('.', '__', $pkg_version); // add underscored version to package name
 
         $pkg_pattern = '/^'.$pkg_name.'-[0-9].*/'; // search pattern for packages
 
@@ -56,16 +56,23 @@ foreach ($pkgs_github_array as $pkg_github) {
             }
         }
 
+        $downloadedpkg = !empty(preg_grep($pkg_pattern, $pkgs_installed)) ? array_values(preg_grep($pkg_pattern, $pkgs_installed))[0] : false;
+        $downloadedpkgv = $downloadedpkg ? preg_match('/^'.$pkg_name.'-(\d.+?)[-|_].*/',$downloadedpkg, $matches)? $matches[1]:false : false;
+        $updatePkg = version_compare($pkg_version, $downloadedpkgv, '>') ;
+
         $pkg = [
-            'name'       => $pkg_github['name'], // add full package name
+            'name'       => str_replace("_nerdtools.txz",".txz",$pkg_github['name']) , // add full package name
             'pkgname'    => $pkg_name, // add package name only
             'pkgnver'    => $pkg_nver, // add package name with underscored version
             'pkgversion' => $pkg_version, // add package name with raw version
+            'updatePkg'  => $updatePkg, // add package name with raw version
+            'updatePkgs' => "$pkg_version => $downloadedpkgv", // add package name with raw version
             'size'       => format_size($pkg_github['size'], 1, '?'), // add package size
             'installed'  => !empty(preg_grep($pkg_pattern, $pkgs_installed)) ? 'yes' : 'no', // checks if package name is installed
             'installeq'  => in_array(pathinfo($pkg_github['name'], PATHINFO_FILENAME), $pkgs_installed) ? 'yes' : 'no', // checks if package installed equals github exactly
             'downloaded' => !empty(preg_grep($pkg_pattern, $pkgs_downloaded)) ? 'yes' : 'no', // checks if package name is downloaded
             'downloadeq' => in_array($pkg_github['name'], $pkgs_downloaded) ? 'yes' : 'no', // checks if package downloaded equals github exactly
+            'actualpkgv' => $downloadedpkgv ? $downloadedpkgv:" - ", // checks if package name is downloaded
             'config'     => $pkg_set, // install preference
             'plugins'    => $pkg_plgs, // plugins dependency on package
             'desc'       => $pkgs_desc_array[$pkg_name]

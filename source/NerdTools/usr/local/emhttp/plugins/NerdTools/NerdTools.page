@@ -28,7 +28,7 @@ table.tablesorter tbody tr:nth-child(even) {
             <th class="sorter-metric filter-false" data-placeholder="by size" data-metric-name-full="byte|Byte|BYTE" data-metric-name-abbr="b|B"> Size </th>
             <th class="filter-downloaded" data-placeholder="by download"> Downloaded </th>
             <th class="filter-installed" data-placeholder="by install"> Installed </th>
-            <th class="filter-plugins" data-placeholder="Search..."> Plugins </th>
+            <th class="filter-false" data-placeholder="Search..."> Installed Version </th>
             <th class="parser-false filter-false" nowrap="nowrap"></th>
         </tr>
     </thead>
