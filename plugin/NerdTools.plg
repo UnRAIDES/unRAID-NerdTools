@@ -3,8 +3,8 @@
 <!DOCTYPE PLUGIN [
 <!ENTITY name      "NerdTools">
 <!ENTITY author    "UnRAIDES">
-<!ENTITY version   "2022.10.10">
-<!ENTITY md5       "019f58bfbc483f84d5ff4414ffd4e538">
+<!ENTITY version   "2022.10.19">
+<!ENTITY md5       "93f4661294aa8bad2b965b639a4e8a95">
 <!ENTITY launch    "Settings/&name;">
 <!ENTITY github    "UnRAIDES/unRAID-&name;">
 <!ENTITY pluginURL "https://raw.githubusercontent.com/&github;/main/plugin/&name;.plg">
@@ -17,6 +17,11 @@
 
 <CHANGES>
 ##&name;
+###2022.10.19
+- Added: ipmitool-1.8.18
+- Added: mlocate-0.26
+- Added: pigz-2.7
+- Added: sshfs-3.7.2
 ###2022.10.10
 - Changed: axel-2.17.11
 - Added: ddrescue-1.26
