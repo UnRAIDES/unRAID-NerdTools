@@ -66,6 +66,7 @@
  "mcelog":"The user space backend for logging machine check errors reported by the hardware to the kernel. Decodes the logs the errors.",
  "md5deep":"A cross-platform set of programs to compute MD5, SHA-1, SHA-256, Tiger, or Whirlpool message digests on an arbitrary number of files. Has the following additional features: Recursive operation, Comparison mode, Time estimation, Piecewise hasing, and File type mode.",
  "mediainfo":"Supplies technical and tag information about a video or audio file.",
+ "mlocate":"A locate/updatedb implementation. It keeps a database of all existing files and allows you to lookup files by name. The 'm' updatedb reuses the existing database to avoid rereading most of the file system, which makes updatedb faster and does not trash the system caches as much as traditional locate implementations.",
  "moreutils":"moreutils is a growing collection of the unix tools that nobody thought to write long ago when unix was young.",
  "mosh":"remote terminal application that allows roaming, supports intermittent connectivity, and provides intelligent local echo and line editing of user keystrokes.",
  "mtr":"combines the functionality of the traceroute and ping programs in a single network diagnostic tool.",
