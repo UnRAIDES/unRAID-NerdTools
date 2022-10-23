@@ -198,5 +198,16 @@ function checkDepends() {
     } catch (error) {
         console.error('Error checkDepends' + error);
     }
+    try {
+        if ($('#wget2')[0].checked) {
+            $('#gpgme').switchButton({ checked: true });
+            $('#gpgme', '.pkgvalue').val('yes');
+            $('#lzlib').switchButton({ checked: true });
+            $('#lzlib', '.pkgvalue').val('yes');
+            $('#libassuan').switchButton({ checked: true });
+            $('#libassuan', '.pkgvalue').val('yes');
+        }
+    } catch (error) {
+        console.error('Error checkDepends' + error);
+    }
 }
-
