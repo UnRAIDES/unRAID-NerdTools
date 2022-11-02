@@ -128,12 +128,8 @@ foreach ($pkg_cfg as $pkg_name => $pkg_pref) { // get preferences for each packa
         }
 
     } elseif ($pkg_pref == 'no' && $pkg_download_status && $argu) {
-        if($plugins){
-            logger("$pkg_name in use by another plugin, not uninstalled.",$argq);
-        }else{
-            $pkg_msg = 'Uninstalling and deleting';
-            $pkg_cmd = 'removepkg '.$pkg_extra_path.$pkg_name.'*_nerdtools.txz 2>&1; rm '.$pkg_extra_path.$pkg_name.'*_nerdtools.txz 2>&1';
-        }
+        $pkg_msg = 'Uninstalling and deleting';
+        $pkg_cmd = 'removepkg '.$pkg_extra_path.$pkg_name.'*_nerdtools.txz 2>&1; rm '.$pkg_extra_path.$pkg_name.'*_nerdtools.txz 2>&1';
     }
 
     if (!empty($pkg_cmd)) {
