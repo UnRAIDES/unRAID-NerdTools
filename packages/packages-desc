@@ -108,6 +108,7 @@
  "rmlint":"rmlint finds space waste and other broken things on your filesystem and offers to remove it.",
  "rsnapshot":"A remote backup program that uses rsync to take backup snapshots of filesystems. It uses hard links to save space on disk.",
  "reptyr":"A utility for taking an existing running program and attaching it to a new terminal.",
+ "ruby":"A dynamic, open source programming language with a focus on simplicity and productivity. It has an elegant syntax that is natural to read and easy to write.",
  "screen":"A full-screen window manager that multiplexes a physical terminal between several processes (typically interactive shells). Each virtual terminal provides the functions of a DEC VT100 terminal and several control functions from the ISO 6492 (ECMA 48, ANSI X3.64) and ISO 2022 standards.",
  "sdparm":"A utility for listing and potentially changing SCSI disk parameters.",
  "serf":"The serf library is a high performance C-based HTTP client library built upon the Apache Portable Runtime (APR) library.",
