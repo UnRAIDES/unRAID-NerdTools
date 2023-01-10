@@ -138,7 +138,7 @@
  "wd5741":"Firmware update utility for WD Red drives.",
  "wget2":"GNU Wget2 is the successor of GNU Wget, a file and recursive website downloader. Designed and written from scratch it wraps around libwget, that provides the basic functions needed by a web client. In many cases Wget2 downloads much faster than Wget1.x due to HTTP2, HTTP compression, parallel connections and use of If-Modified-Since HTTP header.",
  "xinetd":"A powerful inetd replacement. It has access control mechanisms, extensive logging capabilities, the ability to make services available based on time, can place limits on the number of servers that can be started, and has a configurable defence mechanisms to protect against port scanners.",
- "zerotier":"Private VPN service.",
+ "zerotier":"Private VPN service. Add this command to User Scripts to automatically start in daemon mode: zerotier-cli info 2>&1 >/dev/null || zerotier-one -d",
  "zpaq":"Manages journaling archives for incremental user-level local or remote backups that conform to The ZPAQ Open Standard Format for Highly Compressed Data (see AVAILABILITY). The format supports encrypted, deduplicated, and compressed single or multi-part archives with rollback capability. It supports archives as large as 1000 times available memory or up to 250 TB and 4 billion files, interoperable between Windows and Unix\/Linux\/OS X.",
  "zsh":"A UNIX command interpreter which resembles the Korn shell It includes enhancements of many types, notably in the command-line editor, options for customizing its behavior, filename globbing."
 }
