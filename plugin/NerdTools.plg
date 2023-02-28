@@ -3,8 +3,8 @@
 <!DOCTYPE PLUGIN [
 <!ENTITY name      "NerdTools">
 <!ENTITY author    "UnRAIDES">
-<!ENTITY version   "2022.11.01">
-<!ENTITY md5       "5cd31bc67b3b3fb0f32e4e8a6c89216c">
+<!ENTITY version   "2023.02.28">
+<!ENTITY md5       "b37be4e724919156f11f354205882fd0">
 <!ENTITY launch    "Settings/&name;">
 <!ENTITY github    "UnRAIDES/unRAID-&name;">
 <!ENTITY pluginURL "https://raw.githubusercontent.com/&github;/main/plugin/&name;.plg">
@@ -17,6 +17,8 @@
 
 <CHANGES>
 ##&name;
+###2023.02.28
+- Updated: ddrescue-1.27
 ###2022.11.01
 - Fixed: Removepkg Fixed packages
 ###2022.10.24
