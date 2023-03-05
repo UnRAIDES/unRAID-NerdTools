@@ -59,6 +59,7 @@
  "lbzip2":"pthreads-based parallel bzip2\/bunzip2",
  "lftp":"A program that allows sophisticated ftp and http connections to other hosts. lftp can handle many file access methods including ftp, ftps, http, https, hftp, fish and file. Every operation in lftp is reliable, that is any non-fatal error is ignored and the operation is retried. lftp has shell-like command syntax. Has a built in mirror feature which can download or upload a whole directory tree. To learn about many more features of lftp, see  man lftp.",
  "libassuan":"This is the IPC library used by GnuPG 2.x, GPGME and a few other packages.",
+ "libffi": "(A Portable Foreign Function Interface Library) FFI stands for Foreign Function Interface. A foreign function interface is the popular name for the interface that allows code written in one language to call code written in another language. The libffi library really only provides the lowest, machine dependent layer of a fully featured foreign function interface.",
  "libmediainfo":"A library for mediainfo.",
  "libzen":"A mandatory library for libmediainfo.",
  "llfuse":"A set of Python bindings for the low level FUSE API.",

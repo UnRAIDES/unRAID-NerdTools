@@ -3,8 +3,8 @@
 <!DOCTYPE PLUGIN [
 <!ENTITY name      "NerdTools">
 <!ENTITY author    "UnRAIDES">
-<!ENTITY version   "2023.02.28">
-<!ENTITY md5       "b37be4e724919156f11f354205882fd0">
+<!ENTITY version   "2023.03.05">
+<!ENTITY md5       "9358b28c7ed7e3bbd8f14fafb2745d51">
 <!ENTITY launch    "Settings/&name;">
 <!ENTITY github    "UnRAIDES/unRAID-&name;">
 <!ENTITY pluginURL "https://raw.githubusercontent.com/&github;/main/plugin/&name;.plg">
@@ -17,8 +17,23 @@
 
 <CHANGES>
 ##&name;
-###2023.02.28
+###2023.03.05
 - Updated: ddrescue-1.27
+- Updated: gpgme-1.18.0
+- Updated: irssi-1.4.3
+- Updated: powertop-2.15
+- Updated: python-pip-22.2.2
+- Updated: python-setuptools-65.1.1
+- Updated: python2-2.7.18-5
+- Updated: python3-3.9.16
+- Updated: sshfs-3.7.3
+- Updated: tcl-8.6.13
+- Updated: tmux-3.3a
+- Updated: utf8proc-2.8.0
+- Updated: vim-9.0.1362
+- Updated: wget2-2.0.1
+- Updated: zsh-5.9
+- Added: libffi-3.4.4 as dependency of iotop #37
 ###2022.11.01
 - Fixed: Removepkg Fixed packages
 ###2022.10.24
@@ -120,7 +135,7 @@ echo ""
 echo "-----------------------------------------------------------"
 echo " &name; has been installed."
 echo ""
-echo " Copyright 2022, &author;"
+echo " Copyright 2023, &author;"
 echo " Credits, based on NerdPack plugin of dmacias72, eschultz"
 echo " Version: &version;"
 echo "-----------------------------------------------------------"
@@ -151,7 +166,7 @@ rm -f /boot/config/plugins/NerdTools 1>/dev/null
 echo ""
 echo "-----------------------------------------------------------"
 echo " &name; has been removed."
-echo " Copyright 2022, &author;"
+echo " Copyright 2023, &author;"
 echo " Credits, based on NerdPack plugin of dmacias72, eschultz"		
 echo " Version: &version;"
 echo "-----------------------------------------------------------"
