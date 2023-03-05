@@ -156,6 +156,8 @@ function checkDepends() {
         if ($('#iotop')[0].checked) {
             $('#python2').switchButton({ checked: true });
             $('#python2', '.pkgvalue').val('yes');
+            $('#libffi').switchButton({ checked: true });
+            $('#libffi', '.pkgvalue').val('yes');
         }
     } catch (error) {
         console.error('Error checkDepends' + error);
