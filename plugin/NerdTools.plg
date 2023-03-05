@@ -3,8 +3,8 @@
 <!DOCTYPE PLUGIN [
 <!ENTITY name      "NerdTools">
 <!ENTITY author    "UnRAIDES">
-<!ENTITY version   "2023.03.05">
-<!ENTITY md5       "9358b28c7ed7e3bbd8f14fafb2745d51">
+<!ENTITY version   "2023.03.05b">
+<!ENTITY md5       "e475a84a137dcf1f96fc079e74f99ed9">
 <!ENTITY launch    "Settings/&name;">
 <!ENTITY github    "UnRAIDES/unRAID-&name;">
 <!ENTITY pluginURL "https://raw.githubusercontent.com/&github;/main/plugin/&name;.plg">
@@ -17,6 +17,8 @@
 
 <CHANGES>
 ##&name;
+###2023.03.05b
+- Initial 6.12 compatibility
 ###2023.03.05
 - Updated: ddrescue-1.27
 - Updated: gpgme-1.18.0
@@ -33,7 +35,7 @@
 - Updated: vim-9.0.1362
 - Updated: wget2-2.0.1
 - Updated: zsh-5.9
-- Added: libffi-3.4.4 as dependency of iotop #37
+- Added: libffi-3.4.4 as dependency of iotop (Issues #37)
 ###2022.11.01
 - Fixed: Removepkg Fixed packages
 ###2022.10.24
