@@ -11,6 +11,7 @@ if (!file_exists($repo_file) || !empty($_GET['force']) || (filemtime($repo_file)
 }
 
 $pkgs_array = [];
+$pkg_nameArray = [];
 
 foreach ($pkgs_github_array as $pkg_github) {
     $pkg_nameArray = explode('-', $pkg_github['name']); // split package name into array
@@ -36,7 +37,7 @@ foreach ($pkgs_github_array as $pkg_github) {
 
         // check all plugins for package dependency
         $plugins =  [];
-        exec("cd /boot/config/plugins ; find *.plg | xargs grep '${pkg_name}-${pkg_version}' -sl",$plugins);
+        exec("cd /boot/config/plugins ; find *.plg | xargs grep '$pkg_name-$pkg_version' -sl",$plugins);
         $pkg_plgs = '--';
         if ($plugins){
             foreach ($plugins as $plugin){
@@ -59,6 +60,8 @@ foreach ($pkgs_github_array as $pkg_github) {
         $downloadedpkg = !empty(preg_grep($pkg_pattern, $pkgs_installed)) ? array_values(preg_grep($pkg_pattern, $pkgs_installed))[0] : false;
         $downloadedpkgv = $downloadedpkg ? preg_match('/^'.$pkg_name.'-(\d.+?)[-|_].*/',$downloadedpkg, $matches)? $matches[1]:false : false;
         $updatePkg = version_compare($pkg_version, $downloadedpkgv, '>') ;
+        
+        if (!array_key_exists($pkg_name, $pkgs_desc_array)) $pkgs_desc_array[$pkg_name] = "";
 
         $pkg = [
             'name'       => str_replace("_nerdtools.txz",".txz",$pkg_github['name']) , // add full package name
