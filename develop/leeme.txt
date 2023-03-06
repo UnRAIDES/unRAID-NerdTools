@@ -1,11 +1,11 @@
-# Generador de json por version
 
-php create.json.php 6.11 > ../contents/packages.6.11.json
+
+MODO DE USO
 
 # Generador de version de plugin
 
 Ejemplos:
-	./unraidmpkg.sh
-	./unraidmpkg.sh a
-	./unraidmpkg.sh b
-	./unraidmpkg.sh c
+	./develop/unraidmpkg.sh
+	./develop/unraidmpkg.sh a
+	./develop/unraidmpkg.sh b
+	./develop/unraidmpkg.sh c
