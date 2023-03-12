@@ -136,80 +136,24 @@ function Apply() {
 
 function checkDepends() {
     try {
-        
-        if ($('#tmux')[0].checked) {
-            $('#ncurses-terminfo').switchButton({ checked: true });
-            $('#ncurses-terminfo', '.pkgvalue').val('yes');
-        }
+        $.getJSON('/plugins/NerdTools/include/CheckDepends.php', function(data) {
+            console.log(data)
+            $.each(data,function(index, value){
+                if ($('#'+index)[0]){
+                    value.split(",").forEach(function (item) {       
+                        if (item && $('#'+index)[0].checked) {
+                            $('#' + item).switchButton({ checked: true });
+                            $('#' + item, '.pkgvalue').val('yes');
+                        }
+                    });
+                }
+            });
+        });
+
     } catch (error) {
         console.error('Error checkDepends' + error);
     }
-    try {
-        if ($('#expect')[0].checked) {
-            $('#tcl').switchButton({ checked: true });
-            $('#tcl', '.pkgvalue').val('yes');
-        }
-    } catch (error) {
-        console.error('Error checkDepends' + error);
-    }
-    try {
-        if ($('#iotop')[0].checked) {
-            $('#python2').switchButton({ checked: true });
-            $('#python2', '.pkgvalue').val('yes');
-            $('#libffi').switchButton({ checked: true });
-            $('#libffi', '.pkgvalue').val('yes');
-        }
-    } catch (error) {
-        console.error('Error checkDepends' + error);
-    }
-    try {
-        if ($('#vim')[0].checked) {
-            $('#libsodium').switchButton({ checked: true });
-            $('#libsodium', '.pkgvalue').val('yes');
-        }
-    } catch (error) {
-        console.error('Error checkDepends' + error);
-    }
-    try {
-        if ($('#borgbackup')[0].checked) {
-            $('#python3').switchButton({ checked: true });
-            $('#python3', '.pkgvalue').val('yes');
-            $('#python-setuptools').switchButton({ checked: true });
-            $('#python-setuptools', '.pkgvalue').val('yes');
-            $('#llfuse').switchButton({ checked: true });
-            $('#llfuse', '.pkgvalue').val('yes');
-        }
-    } catch (error) {
-        console.error('Error checkDepends' + error);
-    }
-    try {
-        if ($('#irssi')[0].checked) {
-            $('#utf8proc').switchButton({ checked: true });
-            $('#utf8proc', '.pkgvalue').val('yes');
-        }
-    } catch (error) {
-        console.error('Error checkDepends' + error);
-    }
-    try {
-        if ($('#mediainfo')[0].checked) {
-            $('#libzen').switchButton({ checked: true });
-            $('#libzen', '.pkgvalue').val('yes');
-            $('#libmediainfo').switchButton({ checked: true });
-            $('#libmediainfo', '.pkgvalue').val('yes');
-        }
-    } catch (error) {
-        console.error('Error checkDepends' + error);
-    }
-    try {
-        if ($('#wget2')[0].checked) {
-            $('#gpgme').switchButton({ checked: true });
-            $('#gpgme', '.pkgvalue').val('yes');
-            $('#lzlib').switchButton({ checked: true });
-            $('#lzlib', '.pkgvalue').val('yes');
-            $('#libassuan').switchButton({ checked: true });
-            $('#libassuan', '.pkgvalue').val('yes');
-        }
-    } catch (error) {
-        console.error('Error checkDepends' + error);
-    }
+
+    return ""
+
 }
