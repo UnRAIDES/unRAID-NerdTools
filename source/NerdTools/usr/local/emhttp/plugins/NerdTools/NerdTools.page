@@ -1,6 +1,6 @@
-Icon="cog"
-Menu="UserPreferences"
+Menu="Utilities"
 Title="NerdTools"
+Icon="cog"
 Tag="cog"
 ---
 <link type="text/css" rel="stylesheet" href="<?=autov('/plugins/NerdTools/css/tablesorter.css');?>">
