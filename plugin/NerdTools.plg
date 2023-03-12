@@ -3,8 +3,8 @@
 <!DOCTYPE PLUGIN [
 <!ENTITY name      "NerdTools">
 <!ENTITY author    "UnRAIDES">
-<!ENTITY version   "2023.03.06">
-<!ENTITY md5       "a1c1bb53b51d8ee81bad6867a35d2127">
+<!ENTITY version   "2023.03.11">
+<!ENTITY md5       "c925c69b267d09faab017f5e0889435e">
 <!ENTITY launch    "Settings/&name;">
 <!ENTITY github    "UnRAIDES/unRAID-&name;">
 <!ENTITY pluginURL "https://raw.githubusercontent.com/&github;/main/plugin/&name;.plg">
@@ -17,8 +17,10 @@
 
 <CHANGES>
 ##&name;
+###2023.03.11
+- Fixed: dependency improvements
 ###2023.03.06
-- Fixed: fixed PHP deprecated:
+- Fixed: fixed PHP deprecated
 ###2023.03.05b
 - Initial 6.12 compatibility
 - Fixed: added some missing package descriptions
