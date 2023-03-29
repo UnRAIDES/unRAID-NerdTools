@@ -3,8 +3,8 @@
 <!DOCTYPE PLUGIN [
 <!ENTITY name      "NerdTools">
 <!ENTITY author    "UnRAIDES">
-<!ENTITY version   "2023.03.29">
-<!ENTITY md5       "9fd5ca1386fb4835b4891414c669fc9c">
+<!ENTITY version   "2023.03.30">
+<!ENTITY md5       "6e1b86e01474df79c2ff4936d404086c">
 <!ENTITY launch    "Settings/&name;">
 <!ENTITY github    "UnRAIDES/unRAID-&name;">
 <!ENTITY pluginURL "https://raw.githubusercontent.com/&github;/main/plugin/&name;.plg">
@@ -17,12 +17,13 @@
 
 <CHANGES>
 ##&name;
+###2023.03.30
+- Enhanced: change category of the plugin (PR #50)
 ###2023.03.29
-- Added: ruby-3.2.1
-- Added: btop-1.2.13
-- Added: restic-0.15.1
-- Updated: vim-9.0.1418
-- Enhanced: change category of the plugin 
+- Added: ruby-3.2.1 (PR #36)
+- Added: btop-1.2.13 (PR #51)
+- Added: restic-0.15.1 (PR #52)
+- Updated: vim-9.0.1418 
 ###2023.03.11
 - Fixed: dependency improvements
 ###2023.03.06
