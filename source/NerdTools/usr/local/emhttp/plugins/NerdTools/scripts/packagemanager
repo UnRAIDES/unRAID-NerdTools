@@ -73,17 +73,24 @@ foreach ($pkg_cfg as $pkg_name => $pkg_pref) { // get preferences for each packa
     $pkg_patternd = '/^'.$pkg_name.'.*_nerdtools.*/'; // search pattern for packages
     $pkg_install_status  = !empty(preg_grep($pkg_patternd, $pkgs_installed)); // check install status
     $pkg_download_status = !empty(preg_grep($pkg_patternd, $pkgs_downloaded)); // check package download status
-    $pkg_online_status   = !empty(preg_grep($pkg_pattern, $pkgs_github_array));
+    #$pkg_online_status   = !empty(preg_grep($pkg_pattern, $pkgs_github_array));
     $pkg_find .= " ! -name '".$pkg_name."*'";
 
-    $pkg_matches = array_filter($pkgs_github_array, function($a) use ($pkg_pattern) {
-        return preg_grep($pkg_pattern, $a);
-    });
+    #$pkg_matches = array_filter($pkgs_github_array, function($a) use ($pkg_pattern) {               
+    #    return preg_grep($pkg_pattern, $a);
+    #});
 
-    $pkg_gitname = array_values($pkg_matches)[0]['name'];
+    foreach ($pkgs_github_array as $item) {
+        if (preg_match($pkg_pattern, $item['name'])) {
+            $pkg_matches =  $item;
+            break;
+        }
+    }
+
+    $pkg_gitname = $pkg_matches['name'];
     $pkg_file    = $pkg_extra_path.$pkg_gitname;
-    $pkg_url     = array_values($pkg_matches)[0]['download_url'];
-    $pkg_sha1    = array_values($pkg_matches)[0]['sha'];
+    $pkg_url     = $pkg_matches['download_url'];
+    $pkg_sha1    = $pkg_matches['sha'];
 
     //check if plugin is dependent on package
     $plugins = [];
@@ -93,7 +100,7 @@ foreach ($pkg_cfg as $pkg_name => $pkg_pref) { // get preferences for each packa
         foreach ($plugins as $plugin){
             $plg_msg .= pathinfo($plugin, PATHINFO_FILENAME).", ";
         }
-        logger(substr($plg_msg, 0, -2));
+        #logger(substr($plg_msg, 0, -2));
     }
 
     $pkg_file = str_replace("_nerdtools.txz",".txz",$pkg_file);
@@ -103,11 +110,6 @@ foreach ($pkg_cfg as $pkg_name => $pkg_pref) { // get preferences for each packa
         // if executing from the wegui check status and download if necessary
         if ($argd) {
             if (!$pkg_download_status) { //if package is not downloaded
-
-                //logger('Downloading '.$pkg_gitname.' package...', $argq);
-                //logger('Downloading pkg_file '.$pkg_file.' package...', $argq);
-                //logger('Downloading pkg_url '.$pkg_url.' package...', $argq);
-                //logger('Downloading pkg_sha1 '.$pkg_sha1.' package...', $argq);
 
                 get_file_from_url($pkg_file, $pkg_url);
 
@@ -144,12 +146,12 @@ foreach ($pkg_cfg as $pkg_name => $pkg_pref) { // get preferences for each packa
                     if(!is_dir($pkg_file))
                         unlink($pkg_file);
                     $pkg_msg = 'checksum failed! package deleted.';
+                    logger($pkg_name." $pkg_msg", $argq);
                 }
             }else{
                 $pkg_msg = ' package missing!';
+                logger($pkg_name." $pkg_msg", $argq);
             }
-
-            logger($pkg_name." $pkg_msg", $argq);
         }
     }
 }
