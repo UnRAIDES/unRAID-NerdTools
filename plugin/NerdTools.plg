@@ -3,8 +3,8 @@
 <!DOCTYPE PLUGIN [
 <!ENTITY name      "NerdTools">
 <!ENTITY author    "UnRAIDES">
-<!ENTITY version   "2023.04.24">
-<!ENTITY md5       "c07e631c5cf5b4f202b93e167059b29f">
+<!ENTITY version   "2023.05.02">
+<!ENTITY md5       "d49472a5b87818f0a1090a259324de73">
 <!ENTITY launch    "Settings/&name;">
 <!ENTITY github    "UnRAIDES/unRAID-&name;">
 <!ENTITY pluginURL "https://raw.githubusercontent.com/&github;/main/plugin/&name;.plg">
@@ -17,6 +17,11 @@
 
 <CHANGES>
 ##&name;
+###2023.05.02
+- Update: borgbackup-1.2.4
+- Update: python3-3.9.16-3
+- Added: msgpack-python-1.0.5 as dependency of borgbackup
+- Added: sg3_utils-1.47 (PR #41)
 ###2023.04.24
 - Enhanced: improvements in package installation
 ###2023.03.30
