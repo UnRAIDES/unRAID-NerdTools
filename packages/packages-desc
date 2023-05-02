@@ -75,6 +75,7 @@
  "mlocate":"A locate/updatedb implementation. It keeps a database of all existing files and allows you to lookup files by name. The 'm' updatedb reuses the existing database to avoid rereading most of the file system, which makes updatedb faster and does not trash the system caches as much as traditional locate implementations.",
  "moreutils":"moreutils is a growing collection of the unix tools that nobody thought to write long ago when unix was young.",
  "mosh":"Remote terminal application that allows roaming, supports intermittent connectivity, and provides intelligent local echo and line editing of user keystrokes.",
+ "msgpack-python":"MessagePack is an efficient binary serialization format. It lets you exchange data among multiple languages like JSON. But it's faster and smaller. Small integers are encoded into a single byte, and typical short strings require only one extra byte in addition to the strings themselves.",
  "mtr":"Combines the functionality of the traceroute and ping programs in a single network diagnostic tool.",
  "multitail ":"MultiTail lets you view one or multiple files like the original tail program. The difference is that it creates multiple windows on your console.",
  "mktorrent":"Torrent file creator",
