@@ -6,8 +6,10 @@ require_once '/usr/local/emhttp/plugins/NerdTools/include/DownloadHelpers.php';
 if (!file_exists($repo_file) || !empty($_GET['force']) || (filemtime($repo_file) < (time() - 3600))) {
     get_content_from_github($pkg_repo, $repo_file);
     get_content_from_github($pkg_desc, $desc_file);
+    get_content_from_github($pkg_depends, $depends_file);
     $pkgs_desc_array   = file_exists($desc_file) ? json_decode(file_get_contents($desc_file), true) : [];
     $pkgs_github_array = file_exists($repo_file) ? json_decode(file_get_contents($repo_file), true) : [];
+    $depends_file_array = file_exists($depends_file) ? json_decode(file_get_contents($depends_file), true) : [];
 }
 
 $pkgs_array = [];
@@ -64,21 +66,22 @@ foreach ($pkgs_github_array as $pkg_github) {
         if (!array_key_exists($pkg_name, $pkgs_desc_array)) $pkgs_desc_array[$pkg_name] = "";
 
         $pkg = [
-            'name'       => str_replace("_nerdtools.txz",".txz",$pkg_github['name']) , // add full package name
-            'pkgname'    => $pkg_name, // add package name only
-            'pkgnver'    => $pkg_nver, // add package name with underscored version
-            'pkgversion' => $pkg_version, // add package name with raw version
-            'updatePkg'  => $updatePkg, // add package name with raw version
-            'updatePkgs' => "$pkg_version => $downloadedpkgv", // add package name with raw version
-            'size'       => format_size($pkg_github['size'], 1, '?'), // add package size
-            'installed'  => !empty(preg_grep($pkg_pattern, $pkgs_installed)) ? 'yes' : 'no', // checks if package name is installed
-            'installeq'  => in_array(pathinfo($pkg_github['name'], PATHINFO_FILENAME), $pkgs_installed) ? 'yes' : 'no', // checks if package installed equals github exactly
-            'downloaded' => !empty(preg_grep($pkg_pattern, $pkgs_downloaded)) ? 'yes' : 'no', // checks if package name is downloaded
-            'downloadeq' => in_array($pkg_github['name'], $pkgs_downloaded) ? 'yes' : 'no', // checks if package downloaded equals github exactly
-            'actualpkgv' => $downloadedpkgv ? $downloadedpkgv:" - ", // checks if package name is downloaded
-            'config'     => $pkg_set, // install preference
-            'plugins'    => $pkg_plgs, // plugins dependency on package
-            'desc'       => $pkgs_desc_array[$pkg_name]
+            'name'          => str_replace("_nerdtools.txz",".txz",$pkg_github['name']) , // add full package name
+            'dependencies'  => $depends_file_array[$pkg_name] ? str_replace(array(" ",","), array("",", "), $depends_file_array[$pkg_name]) : '', // add package name only
+            'pkgname'       => $pkg_name, // add package name only
+            'pkgnver'       => $pkg_nver, // add package name with underscored version
+            'pkgversion'    => $pkg_version, // add package name with raw version
+            'updatePkg'     => $updatePkg, // add package name with raw version
+            'updatePkgs'    => "$pkg_version => $downloadedpkgv", // add package name with raw version
+            'size'          => format_size($pkg_github['size'], 1, '?'), // add package size
+            'installed'     => !empty(preg_grep($pkg_pattern, $pkgs_installed)) ? 'yes' : 'no', // checks if package name is installed
+            'installeq'     => in_array(pathinfo($pkg_github['name'], PATHINFO_FILENAME), $pkgs_installed) ? 'yes' : 'no', // checks if package installed equals github exactly
+            'downloaded'    => !empty(preg_grep($pkg_pattern, $pkgs_downloaded)) ? 'yes' : 'no', // checks if package name is downloaded
+            'downloadeq'    => in_array($pkg_github['name'], $pkgs_downloaded) ? 'yes' : 'no', // checks if package downloaded equals github exactly
+            'actualpkgv'    => $downloadedpkgv ? $downloadedpkgv:" - ", // checks if package name is downloaded
+            'config'        => $pkg_set, // install preference
+            'plugins'       => $pkg_plgs, // plugins dependency on package
+            'desc'          => $pkgs_desc_array[$pkg_name]
         ];
 
         $pkgs_array[] = $pkg;

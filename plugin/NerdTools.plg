@@ -17,6 +17,8 @@
 
 <CHANGES>
 ##&name;
+###2023.05.04
+- Enhanced: improvements in the treatment of dependencies
 ###2023.05.02
 - Update: borgbackup-1.2.4
 - Update: python3-3.9.16-3
