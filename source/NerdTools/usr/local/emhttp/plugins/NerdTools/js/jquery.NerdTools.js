@@ -140,10 +140,10 @@ function checkDepends() {
             console.log(data)
             $.each(data,function(index, value){
                 if ($('#'+index)[0]){
-                    value.split(",").forEach(function (item) {       
+                    value.split(",").forEach(function (item) { 
                         if (item && $('#'+index)[0].checked) {
-                            $('#' + item).switchButton({ checked: true });
-                            $('#' + item, '.pkgvalue').val('yes');
+                            $('#' + item.trim()).switchButton({ checked: true });
+                            $('#' + item.trim(), '.pkgvalue').val('yes');
                         }
                     });
                 }

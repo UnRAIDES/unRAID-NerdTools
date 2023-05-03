@@ -28,7 +28,7 @@ function get_content_from_github($repo, $file) {
     curl_setopt($ch, CURLOPT_URL, $repo);
     $content = curl_exec($ch);
     curl_close($ch);
-    if (!empty($content) && (!is_file($file) || $content != file_get_contents($file)))
+    if (!empty($content))
         file_put_contents($file, $content);
 }
 
