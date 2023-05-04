@@ -2,3 +2,4 @@
 upgrade-packages
 
 develop/rsync.txt
+*.bak

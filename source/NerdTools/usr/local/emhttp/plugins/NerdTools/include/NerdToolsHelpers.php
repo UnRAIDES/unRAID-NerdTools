@@ -13,10 +13,12 @@ if (!is_dir($pkg_extra_path))
 
 $pkg_desc = 'https://raw.githubusercontent.com/UnRAIDES/unRAID-NerdTools/main/packages/packages-desc';
 $pkg_repo = "https://api.github.com/repos/UnRAIDES/unRAID-NerdTools/contents/packages/$os_version";
+$pkg_depends = 'https://raw.githubusercontent.com/UnRAIDES/unRAID-NerdTools/main/packages/packages-depends';
 
-$desc_file   = $pkg_path.'packages-desc';
-$repo_file   = $pkg_path.'packages.json';
-$config_file = $plg_path.'NerdTools.cfg';
+$desc_file    = $pkg_path.'packages-desc';
+$repo_file    = $pkg_path.'packages.json';
+$config_file  = $plg_path.'NerdTools.cfg';
+$depends_file = $plg_path.'packages-depends';
 
 // get package configs
 $pkg_cfg = file_exists($config_file) ? parse_ini_file($config_file) : [];
@@ -30,6 +32,8 @@ $pkgs_installed    = array_diff(scandir("/var/log/packages", 1), ['.', '..']);
 $pkgs_desc_array   = file_exists($desc_file) ? json_decode(file_get_contents($desc_file), true) : [];
 
 $pkgs_github_array = file_exists($repo_file) ? json_decode(file_get_contents($repo_file), true) : [];
+
+$depends_file_array = file_exists($depends_file) ? json_decode(file_get_contents($depends_file), true) : [];
 
 function logger($output, $quiet = false) {
     exec('echo '.escapeshellarg($output).' 2>&1 | logger -tnerdpack');
