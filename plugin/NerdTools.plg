@@ -19,6 +19,9 @@
 ##&name;
 ###2023.05.04
 - Enhanced: improvements in the treatment of dependencies
+- Enhanced: add dependencies column
+- Enhanced: rearrange multiple columns
+- Enhanced: delete DOWNLOADED column
 ###2023.05.02
 - Update: borgbackup-1.2.4
 - Update: python3-3.9.16-3
@@ -159,7 +162,7 @@ echo "-----------------------------------------------------------"
 echo " &name; has been installed."
 echo ""
 echo " Copyright 2023, &author;"
-echo " Credits, based on NerdPack plugin of dmacias72, eschultz"
+echo " based on NerdPack"
 echo " Version: &version;"
 echo "-----------------------------------------------------------"
 echo ""

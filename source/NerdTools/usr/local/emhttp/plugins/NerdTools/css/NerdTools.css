@@ -19,3 +19,9 @@
     white-space:nowrap;
     cursor: inherit;
 }
+table.tablesorter tbody td.wrapper  {
+    white-space: nowrap;
+}
+table.tablesorter .checked  {
+    width: 90px;
+}
