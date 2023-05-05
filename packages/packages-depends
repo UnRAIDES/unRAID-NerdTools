@@ -1,5 +1,5 @@
 {
-	"borgbackup": "python3,python-setuptools,llfuse,msgpack-python",
+	"borgbackup": "python3,python-setuptools,llfuse,msgpack-python,python-packaging",
 	"expect": "tcl",
 	"iotop": "python2,libffi",
 	"irssi": "utf8proc",
