@@ -13,7 +13,6 @@ $(function(){
             filter_reset: '.reset',
             filter_functions: {
                 '.filter-version': true,
-                '.filter-downloaded': true,
                 '.filter-installed': true
             }
         }
@@ -66,13 +65,13 @@ function packageQuery(force) {
            }
 
             $('#tblPackages tbody').append("<tr>"+
-            "<td class='package' title='"+data.packages[i].desc+"'>"+data.packages[i].name+"</td>"+ // package name
+            "<td class='checked'><input class='pkgcheckbox' id='"+data.packages[i].pkgname+"' type='checkbox' "+Checked+">"+
+            "<td class='package wrapper' title='"+data.packages[i].desc+"'>"+data.packages[i].name+"</td>"+ // package name
+            "<td>"+data.packages[i].dependencies+"</td>"+ // package status
             "<td>"+Update+"</td>"+ // package status
-            "<td>"+data.packages[i].size+"</td>"+ // package size
             "<td>"+Downloaded+"</td>"+ // package downloaded
-            "<td>"+Installed+"</td>"+ // package installed
+            "<td>"+data.packages[i].size+"</td>"+ // package size
             "<td>"+data.packages[i].actualpkgv+"</td>"+ // package dependents
-            "<td><input class='pkgcheckbox' id='"+data.packages[i].pkgname+"' type='checkbox' "+Checked+">"+
             "<input class='pkgvalue' type='hidden' id='"+data.packages[i].pkgname+"_value' name='"+data.packages[i].pkgnver+"' value='"+data.packages[i].config+"'></td>"+
             "</tr>");
         }

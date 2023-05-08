@@ -3,8 +3,8 @@
 <!DOCTYPE PLUGIN [
 <!ENTITY name      "NerdTools">
 <!ENTITY author    "UnRAIDES">
-<!ENTITY version   "2023.05.04">
-<!ENTITY md5       "a8754758eabb13ebc5a278e606c6549e">
+<!ENTITY version   "2023.05.07">
+<!ENTITY md5       "ad9092c4776721583702e501e0735649">
 <!ENTITY launch    "Settings/&name;">
 <!ENTITY github    "UnRAIDES/unRAID-&name;">
 <!ENTITY pluginURL "https://raw.githubusercontent.com/&github;/main/plugin/&name;.plg">
@@ -17,6 +17,10 @@
 
 <CHANGES>
 ##&name;
+###2023.05.05
+- Enhanced: add dependencies column
+- Enhanced: rearrange multiple columns
+- Enhanced: delete DOWNLOADED column
 ###2023.05.04
 - Enhanced: improvements in the treatment of dependencies
 - Added: python-packaging-21.3 as dependency of borgbackup
@@ -159,7 +163,7 @@ echo "-----------------------------------------------------------"
 echo " &name; has been installed."
 echo ""
 echo " Copyright 2023, &author;"
-echo " Credits, based on NerdPack plugin of dmacias72, eschultz"
+echo " based on NerdPack"
 echo " Version: &version;"
 echo "-----------------------------------------------------------"
 echo ""
@@ -190,7 +194,7 @@ echo ""
 echo "-----------------------------------------------------------"
 echo " &name; has been removed."
 echo " Copyright 2023, &author;"
-echo " Credits, based on NerdPack plugin of dmacias72, eschultz"		
+echo " based on NerdPack"		
 echo " Version: &version;"
 echo "-----------------------------------------------------------"
 echo ""
