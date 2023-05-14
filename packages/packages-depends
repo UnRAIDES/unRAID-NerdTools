@@ -4,6 +4,7 @@
 	"iotop": "python2,libffi",
 	"irssi": "utf8proc",
 	"mediainfo": "libzen,libmediainfo",
+	"python3": "python-pip,python-setuptools",
 	"tmux": "ncurses-terminfo",
 	"vim": "libsodium",
 	"wget2": "gpgme,lzlib,libassuan"
