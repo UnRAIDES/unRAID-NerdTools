@@ -135,6 +135,9 @@ function Apply() {
 
 function checkDepends() {
     try {
+        $.ajaxSetup({
+            async: false
+        });
         $.getJSON('/plugins/NerdTools/include/CheckDepends.php', function(data) {
             console.log(data)
             $.each(data,function(index, value){
