@@ -22,7 +22,7 @@
 - Enhanced: autoinstall of the dependencies
 - Added: rclone-1.62.2
 - Added: libjodycode-2.0.1 as dependency of jdupes
-- Added: fish-3.6.1
+- Added: fish-3.6.1 (Issues #59)
 - Update: exiftool-12.60
 - Update: jdupes-1.23.0
 - Update: libmediainfo-23.04
