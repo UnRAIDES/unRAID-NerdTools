@@ -67,7 +67,7 @@ foreach ($pkgs_github_array as $pkg_github) {
 
         $pkg = [
             'name'          => str_replace("_nerdtools.txz",".txz",$pkg_github['name']) , // add full package name
-            'dependencies'  => $depends_file_array[$pkg_name] ?? "" ? str_replace(array(" ",","), array("",", "), $depends_file_array[$pkg_name]) : '',
+            'dependencies'  => isset($depends_file_array[$pkg_name]) ? str_replace(array(" ",","), array("",", "), $depends_file_array[$pkg_name]) : '', // add package name only
             'pkgname'       => $pkg_name, // add package name only
             'pkgnver'       => $pkg_nver, // add package name with underscored version
             'pkgversion'    => $pkg_version, // add package name with raw version

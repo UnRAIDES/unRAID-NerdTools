@@ -137,6 +137,11 @@ foreach ($pkg_cfg as $pkg_name => $pkg_pref) { // get preferences for each packa
     if (!empty($pkg_cmd)) {
         logger("$pkg_msg $pkg_name package...");
         shell_exec($pkg_cmd);
+        $name = explode("-", $pkg_name)[0] ?? "";
+        if ($name) {
+            $find_rm_old ="find ".$pkg_extra_path." -type f ! -name '$pkg_name*' -name '".explode("-", $pkg_name)[0]."-*' -delete";
+            shell_exec($find_rm_old);
+        }
     }else{
         if ($pkg_pref == 'yes'){
             if (file_exists($pkg_file)){
@@ -157,8 +162,8 @@ foreach ($pkg_cfg as $pkg_name => $pkg_pref) { // get preferences for each packa
 }
 logger('Cleaning up packages...');
 
-#$cmd = "find ".$pkg_extra_path." -type f ! -name 'packages.json' ! -name 'packages-desc'".$pkg_find." -delete 2>&1";
-#shell_exec($cmd);
+$cmd = 'find '.$pkg_extra_path.' -type f '.$pkg_find.' -name "*nerdtools*" -delete 2>&1';
+shell_exec($cmd);
 
 logger('All packages processed...');
 
