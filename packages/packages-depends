@@ -8,5 +8,6 @@
 	"python3": "python-pip,python-setuptools",
 	"tmux": "ncurses-terminfo",
 	"vim": "libsodium",
-	"wget2": "gpgme,lzlib,libassuan"
+	"wget2": "gpgme,lzlib,libassuan",
+	"rar2fs": "unrar"
 }

@@ -3,8 +3,8 @@
 <!DOCTYPE PLUGIN [
 <!ENTITY name      "NerdTools">
 <!ENTITY author    "UnRAIDES">
-<!ENTITY version   "2023.06.07">
-<!ENTITY md5       "0b761463e59a198deab64b45b731b64f">
+<!ENTITY version   "2023.07.18">
+<!ENTITY md5       "035da011e5cbb7810f00e21447839271">
 <!ENTITY launch    "Settings/&name;">
 <!ENTITY github    "UnRAIDES/unRAID-&name;">
 <!ENTITY pluginURL "https://raw.githubusercontent.com/&github;/main/plugin/&name;.plg">
@@ -17,6 +17,12 @@
 
   <CHANGES>
 ##&name;
+###2023.07.18
+- Update: vim-9.0.1672
+- Update: python3-3.9.17
+- Update: unrar-6.1.7 rename for work with rar2fs
+- Added: rar2fs-1.29.6
+- Enhanced: Rename update button for clearer text
 ###2023.06.07
 - Enhanced: remove old packages when upgrading
 ###2023.05.15

@@ -36,7 +36,7 @@ table.tablesorter tbody tr:nth-child(even) {
     </tbody>
 </table>
 </div>
-<input onclick="packageQuery(1)" value="Check for Updates" type="button"><input class="reset" type="button" title="reset filters" value="Reset Filters">
+<input onclick="packageQuery(1)" value="Force Updates" type="button" title="Press if the package list doesn't load correctly"><input class="reset" type="button" title="Reset applied filters" value="Reset Filters">
 : <input id="btnApply" type="button" value="Apply"><input type="button" value="Done" onClick="done()">
 <input type="hidden" name="#file" value="NerdTools/NerdTools.cfg">
 </form>
