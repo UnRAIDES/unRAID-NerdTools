@@ -3,8 +3,8 @@
 <!DOCTYPE PLUGIN [
 <!ENTITY name      "NerdTools">
 <!ENTITY author    "UnRAIDES">
-<!ENTITY version   "2023.07.18">
-<!ENTITY md5       "035da011e5cbb7810f00e21447839271">
+<!ENTITY version   "2023.07.20">
+<!ENTITY md5       "507b084014471ac25e7ae3bb6ffa7a8e">
 <!ENTITY launch    "Settings/&name;">
 <!ENTITY github    "UnRAIDES/unRAID-&name;">
 <!ENTITY pluginURL "https://raw.githubusercontent.com/&github;/main/plugin/&name;.plg">
@@ -17,6 +17,8 @@
 
   <CHANGES>
 ##&name;
+###2023.07.20
+- Fixed: rollback python3-3.9.16 for fix SSL problem
 ###2023.07.18
 - Update: vim-9.0.1672
 - Update: python3-3.9.17
@@ -191,7 +193,7 @@ echo "-----------------------------------------------------------"
 echo " &name; has been installed."
 echo ""
 echo " Copyright 2023, &author;"
-echo " based on NerdPack"
+echo " Based on NerdPack"
 echo " Version: &version;"
 echo "-----------------------------------------------------------"
 echo ""
@@ -222,7 +224,7 @@ echo ""
 echo "-----------------------------------------------------------"
 echo " &name; has been removed."
 echo " Copyright 2023, &author;"
-echo " based on NerdPack"		
+echo " Based on NerdPack"		
 echo " Version: &version;"
 echo "-----------------------------------------------------------"
 echo ""
