@@ -16,5 +16,6 @@
 
 ##
 
-NerdTools is the new plugin that allows you to install additional packages in UnRAID easily.
-This project is based on the old NerdPack plugin but has received many improvements and important changes. For example the package installation now takes advantage of the benefits of UnRAID 6.11 and install packages in the path /boot/extra and delegating part of the management to the system itself.
+[NerdTools](https://forums.unraid.net/topic/129200-plug-in-nerdtools/) is an Unraid 6.11+ plugin allowing installation of additional Slackware packages. This is based off the old NerdPack plugin ([GitHub](https://github.com/dmacias72/unRAID-NerdPack), [Forum](https://forums.unraid.net/topic/35866-unraid-6-nerdpack-cli-tools-iftop-iotop-screen-kbd-etc/)) for Unraid 6.10 and earlier.
+
+This plugin uses its GitHub repo as a source of truth for which packages are available, what their dependencies are, and also stores the packages themselves. Upon picking a package for installation, NerdTools will download the package and its dependencies to the Unraid `/boot/extra` directory, a special location on the USB Flash disk which will auto-install any package within at reboot time. It then installs the package using `upgradepkg` for immediate use. 

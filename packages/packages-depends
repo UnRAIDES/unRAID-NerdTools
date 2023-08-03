@@ -5,7 +5,7 @@
 	"irssi": "utf8proc",
 	"jdupes": "libjodycode",
 	"mediainfo": "libzen,libmediainfo",
-	"python3": "python-pip,python-setuptools",
+	"python3": "openssl",
 	"tmux": "ncurses-terminfo",
 	"vim": "libsodium",
 	"wget2": "gpgme,lzlib,libassuan",

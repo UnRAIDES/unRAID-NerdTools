@@ -3,3 +3,4 @@ upgrade-packages
 
 develop/rsync.txt
 *.bak
+.DS_Store
