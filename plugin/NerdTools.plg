@@ -3,8 +3,8 @@
 <!DOCTYPE PLUGIN [
 <!ENTITY name      "NerdTools">
 <!ENTITY author    "UnRAIDES">
-<!ENTITY version   "2023.07.20">
-<!ENTITY md5       "507b084014471ac25e7ae3bb6ffa7a8e">
+<!ENTITY version   "2023.08.09">
+<!ENTITY md5       "e7762879f1a1fe52b01ed175d35f4b13">
 <!ENTITY launch    "Settings/&name;">
 <!ENTITY github    "UnRAIDES/unRAID-&name;">
 <!ENTITY pluginURL "https://raw.githubusercontent.com/&github;/main/plugin/&name;.plg">
@@ -17,12 +17,19 @@
 
   <CHANGES>
 ##&name;
+###2023.08.09
+- Removed: libffi-3.4.4 package added by UnRAID
+- Removed: lzlib-1.13 package added by UnRAID
+- Added: plocate-1.1.19 (Issues #85)
+- Added: liburing-2.4 as dependency of plocate
+- Added: gnupg2-2.4.3
+- Added: npth-1.6 as dependency of gnupg2
 ###2023.07.20
 - Fixed: rollback python3-3.9.16 for fix SSL problem
 ###2023.07.18
-- Update: vim-9.0.1672
-- Update: python3-3.9.17
-- Update: unrar-6.1.7 rename for work with rar2fs
+- Updated: vim-9.0.1672
+- Updated: python3-3.9.17
+- Updated: unrar-6.1.7 rename for work with rar2fs
 - Added: rar2fs-1.29.6
 - Enhanced: Rename update button for clearer text
 ###2023.06.07
@@ -33,17 +40,17 @@
 - Added: rclone-1.62.2
 - Added: libjodycode-2.0.1 as dependency of jdupes
 - Added: fish-3.6.1 (Issues #59)
-- Update: exiftool-12.60
-- Update: jdupes-1.23.0
-- Update: libmediainfo-23.04
-- Update: libzen-0.4.41
-- Update: mediainfo-23.04
-- Update: powershell-7.3.4
+- Updated: exiftool-12.60
+- Updated: jdupes-1.23.0
+- Updated: libmediainfo-23.04
+- Updated: libzen-0.4.41
+- Updated: mediainfo-23.04
+- Updated: powershell-7.3.4
 ###2023.05.14
-- Update: gpgme-1.20.0
-- Update: irssi-1.4.4
-- Update: ruby-3.2.2
-- Update: vim-9.0.1493
+- Updated: gpgme-1.20.0
+- Updated: irssi-1.4.4
+- Updated: ruby-3.2.2
+- Updated: vim-9.0.1493
 - Added: Nodejs-20.1.0
 - Fixed: rollback python3-3.9.16 to release 1 that fix SSL problem (Issues #74)
 - Enhanced: Add python-pip and python-setuptools as dependency of python3
@@ -55,8 +62,8 @@
 - Enhanced: improvements in the treatment of dependencies
 - Added: python-packaging-21.3 as dependency of borgbackup
 ###2023.05.02
-- Update: borgbackup-1.2.4
-- Update: python3-3.9.16-3
+- Updated: borgbackup-1.2.4
+- Updated: python3-3.9.16-3
 - Added: msgpack-python-1.0.5 as dependency of borgbackup
 ###2023.04.24
 - Enhanced: improvements in package installation
