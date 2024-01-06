@@ -2,6 +2,7 @@
  "anacron":"anacron is a computer program that performs periodic command scheduling, which is traditionally done by cron, but without assuming that the system is running continuously.",
  "apr":"Provides a free library of C data structures and routines, forming a system portability layer to as many operating systems as possible.",
  "apr-util":"Provides a free library of C data structures and routines, forming a system portability layer to as many operating systems as possible. This package contains additional utility interfaces for APR; including support for XML, LDAP, database interfaces, URI parsing, and more.",
+ "aria2":"aria2 is a lightweight multi-protocol & multi-source, cross platform download utility operated in command-line. It supports HTTP/HTTPS, FTP, SFTP, BitTorrent and Metalink.",
  "arp-scan":"arp-scan sends ARP (Address Resolution Protocol) queries to the specified targets, and displays any responses that are received. It allows any part of the outgoing ARP packets to be changed, allowing the behavior of targets to non-standard ARP packets to be examined.",
  "atop":"An advanced interactive monitor for Linux-systems to view the load on system-level and process-level.",
  "avfs":"avfs is a system, which enables all programs to look inside archived or compressed files, or access remote files without recompiling the programs or changing the kernel.",
