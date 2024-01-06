@@ -3,8 +3,8 @@
 <!DOCTYPE PLUGIN [
 <!ENTITY name      "NerdTools">
 <!ENTITY author    "UnRAIDES">
-<!ENTITY version   "2024.01.06">
-<!ENTITY md5       "832f4f7ad8b9579417bd450df91a6e8e">
+<!ENTITY version   "2024.01.06b">
+<!ENTITY md5       "a278d5b01c757b811e835b8eee83ba9a">
 <!ENTITY launch    "Settings/&name;">
 <!ENTITY github    "UnRAIDES/unRAID-&name;">
 <!ENTITY pluginURL "https://raw.githubusercontent.com/&github;/main/plugin/&name;.plg">
@@ -17,6 +17,14 @@
 
   <CHANGES>
 ##&name;
+###2024.01.06b
+- Fixed: A error when uninstall NerdTools plugin
+- Fixed: rollback utf8proc-2.7.0-1 by error with glibc-2.8 version request
+- Fixed: rollback irssi-1.4.4-1 by error with glibc-2.8 version request
+- Fixed: rollback gpgme-1.16.0-3 by error with glibc-2.8 version request
+- Fixed: rollback wget2-2.0.0-2 by error with glibc-2.8 version request
+- Fixed: rollback libsodium-1.0.18-3 by error with glibc-2.8 version request
+- Fixed: rollback vim-9.0.2127-1 by error with glibc-2.8 version request
 ###2024.01.06
 - Updated: irssi-1.4.5-2
 - Updated: vim-9.1.0-1
@@ -230,7 +238,7 @@ echo ""
 echo "-----------------------------------------------------------"
 echo " &name; has been installed."
 echo ""
-echo " Copyright 2023, &author;"
+echo " Copyright 2024, &author;"
 echo " Based on NerdPack"
 echo " Version: &version;"
 echo "-----------------------------------------------------------"
@@ -255,13 +263,13 @@ rm -rf &emhttp;
 rm -f &plgPATH;/&plgNAME;.txz
 
 removepkg /boot/extra/*_nerdtools.txz 1>/dev/null
-rm -f /boot/exta/*_nerdtools.txz 1>/dev/null
+rm -f /boot/extra/*_nerdtools.txz 1>/dev/null
 rm -f /boot/config/plugins/NerdTools 1>/dev/null
 
 echo ""
 echo "-----------------------------------------------------------"
 echo " &name; has been removed."
-echo " Copyright 2023, &author;"
+echo " Copyright 2024, &author;"
 echo " Based on NerdPack"		
 echo " Version: &version;"
 echo "-----------------------------------------------------------"
