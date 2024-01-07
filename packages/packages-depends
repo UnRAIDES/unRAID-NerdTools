@@ -6,6 +6,7 @@
 	"irssi": "utf8proc",
 	"jdupes": "libjodycode",
 	"mediainfo": "libzen,libmediainfo",
+	"nmap": "libnl",
 	"plocate": "liburing",
 	"python3": "python-pip,python-setuptools",
 	"rar2fs": "unrar",
