@@ -3,8 +3,8 @@
 <!DOCTYPE PLUGIN [
 <!ENTITY name      "NerdTools">
 <!ENTITY author    "UnRAIDES">
-<!ENTITY version   "2024.01.07">
-<!ENTITY md5       "34c0c3c824830d85e87daa05c7635228">
+<!ENTITY version   "2024.01.27">
+<!ENTITY md5       "2362cf701cb2fb6b32ea9ab78932f8ae">
 <!ENTITY launch    "Settings/&name;">
 <!ENTITY github    "UnRAIDES/unRAID-&name;">
 <!ENTITY pluginURL "https://raw.githubusercontent.com/&github;/main/plugin/&name;.plg">
@@ -17,6 +17,18 @@
 
   <CHANGES>
 ##&name;
+###2024.01.27
+- Fixed: rollback lftp-4.9.2-3
+- Added: fio-3.36-1
+- Added: sshpass-1.06-1
+- Added: nvme-cli-2.6 (Thank you to @SimonF)
+- Added: libffi-3.3-3 (First of all you must remove libffi-3.4.4 at your own risk with removepkg libffi-3.4.4)
+- Updated: rclone-1.65.1-1
+- Updated: fish-3.7.0-1
+- Updated: libmediainfo-23.11-1
+- Updated: mediainfo-23.11-1
+- Updated: restic-0.16.3-1
+- Updated: unrar-6.2.12-1
 ###2024.01.07
 - Added: nmap-7.92-1 (Issues #44)
 - Added: libnl-1.1.4-5 as dependency of nmap 
