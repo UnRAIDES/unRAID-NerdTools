@@ -3,8 +3,8 @@
 <!DOCTYPE PLUGIN [
 <!ENTITY name      "NerdTools">
 <!ENTITY author    "UnRAIDES">
-<!ENTITY version   "2024.01.27">
-<!ENTITY md5       "2362cf701cb2fb6b32ea9ab78932f8ae">
+<!ENTITY version   "2024.02.04">
+<!ENTITY md5       "c58391030deb76faf1500da3117ebd2b">
 <!ENTITY launch    "Settings/&name;">
 <!ENTITY github    "UnRAIDES/unRAID-&name;">
 <!ENTITY pluginURL "https://raw.githubusercontent.com/&github;/main/plugin/&name;.plg">
@@ -17,6 +17,11 @@
 
   <CHANGES>
 ##&name;
+###2024.02.04
+- Fixed: package nvme-cli added original version, the rename not work
+- Fixed: rollback python-pip-21.3.1-2 (added stable version)
+- Updated: rebuild iotop-0.6-3
+- Removed: libffi-3.3-3 (We are sorry but we only add official packages from the stable version and they do not interfere with the packages installed by limetech.)
 ###2024.01.27
 - Fixed: rollback lftp-4.9.2-3
 - Added: fio-3.36-1
