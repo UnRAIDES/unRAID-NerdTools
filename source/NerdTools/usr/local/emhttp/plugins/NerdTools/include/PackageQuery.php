@@ -18,23 +18,23 @@ $pkg_nameArray = [];
 foreach ($pkgs_github_array as $pkg_github) {
     $pkg_nameArray = explode('-', $pkg_github['name']); // split package name into array
 
+    $pattern  = '/^([a-zA-Z0-9-]+)-([\d.]+)-?.*\.txz$/';
+    $pkg_name = "";
+    $pkg_version = "";
+    $pkg_nver = "";
 
+    if (preg_match($pattern, $pkg_github['name'], $matches)) {
+        // $matches[1] contiene el nombre del paquete
+        // $matches[2] contiene la versión del paquete
+        $pkg_name = $matches[1];
+        $pkg_version = $matches[2];
+        $pkg_nver = $matches[2];
+    }
 
     // strip md5 files
     if(!strpos(end($pkg_nameArray),'.md5')) {
-
-        $pkg_name = $pkg_nameArray[0];
-
-        if (sizeof($pkg_nameArray) > 4) { //if package name has a subset get it
-            for ($ii = 1; $ii < sizeof($pkg_nameArray)-3; $ii++) {
-                $pkg_name .= '-'.$pkg_nameArray[$ii];
-            }
-        }
-
-        $pkg_version = $pkg_nameArray[sizeof($pkg_nameArray) - 3]; // get package version
-
+                
         $pkg_nver    = $pkg_name.'-'.str_replace('.', '__', $pkg_version); // add underscored version to package name
-
         $pkg_pattern = '/^'.$pkg_name.'-[0-9].*/'; // search pattern for packages
 
         // check all plugins for package dependency
