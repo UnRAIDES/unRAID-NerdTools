@@ -10,7 +10,6 @@
 	"plocate": "liburing",
 	"python3": "python-pip,python-setuptools",
 	"rar2fs": "unrar",
-	"tmux": "ncurses-terminfo",
 	"vim": "libsodium",
 	"wget2": "gpgme,libassuan"
 }

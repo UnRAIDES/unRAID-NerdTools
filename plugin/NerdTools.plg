@@ -3,8 +3,8 @@
 <!DOCTYPE PLUGIN [
 <!ENTITY name      "NerdTools">
 <!ENTITY author    "UnRAIDES">
-<!ENTITY version   "2024.02.04">
-<!ENTITY md5       "c58391030deb76faf1500da3117ebd2b">
+<!ENTITY version   "2024.02.05">
+<!ENTITY md5       "0c2d4dbee9a3a76ae44e36e54646b213">
 <!ENTITY launch    "Settings/&name;">
 <!ENTITY github    "UnRAIDES/unRAID-&name;">
 <!ENTITY pluginURL "https://raw.githubusercontent.com/&github;/main/plugin/&name;.plg">
@@ -17,6 +17,9 @@
 
   <CHANGES>
 ##&name;
+###2024.02.05
+- Fixed: Improved handling of package names and versions
+- Removed: Delete ncurses-terminfo dependencies of tmux isn't necesary
 ###2024.02.04
 - Fixed: package nvme-cli added original version, the rename not work
 - Fixed: rollback python-pip-21.3.1-2 (added stable version)
