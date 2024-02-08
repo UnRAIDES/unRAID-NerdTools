@@ -3,8 +3,8 @@
 <!DOCTYPE PLUGIN [
 <!ENTITY name      "NerdTools">
 <!ENTITY author    "UnRAIDES">
-<!ENTITY version   "2024.02.05">
-<!ENTITY md5       "0c2d4dbee9a3a76ae44e36e54646b213">
+<!ENTITY version   "2024.02.08">
+<!ENTITY md5       "ef1fa9d87fb514cf3e96f0a805e33e3c">
 <!ENTITY launch    "Settings/&name;">
 <!ENTITY github    "UnRAIDES/unRAID-&name;">
 <!ENTITY pluginURL "https://raw.githubusercontent.com/&github;/main/plugin/&name;.plg">
@@ -17,6 +17,11 @@
 
   <CHANGES>
 ##&name;
+###2024.02.08
+- Updated: exiftool-12.76-1
+- Updated: fzf-0.46.1-1
+- Updated: nodejs-20.11.0-1
+- Added: cksfv-1.3.14-1 (Issues #113)
 ###2024.02.05
 - Fixed: Improved handling of package names and versions
 - Removed: Delete ncurses-terminfo dependencies of tmux isn't necesary
