@@ -3,8 +3,8 @@
 <!DOCTYPE PLUGIN [
 <!ENTITY name      "NerdTools">
 <!ENTITY author    "UnRAIDES">
-<!ENTITY version   "2024.02.08">
-<!ENTITY md5       "ef1fa9d87fb514cf3e96f0a805e33e3c">
+<!ENTITY version   "2024.02.17">
+<!ENTITY md5       "899bc4a953a4e7b08ff6e378f0f9ccb6">
 <!ENTITY launch    "Settings/&name;">
 <!ENTITY github    "UnRAIDES/unRAID-&name;">
 <!ENTITY pluginURL "https://raw.githubusercontent.com/&github;/main/plugin/&name;.plg">
@@ -17,6 +17,13 @@
 
   <CHANGES>
 ##&name;
+###2024.02.17
+- Removed: nvme-cli-2023.11.25 package added by UnRAID on version 6.12.8
+- Enhanced: clean packages-desc file
+- Updated: libmediainfo-24.01-1
+- Updated: mediainfo-24.01-1
+- Updated: powershell-7.4.1-1
+- Rebuild: rar2fs-1.29.6-3 fix error with dependency
 ###2024.02.08
 - Updated: exiftool-12.76-1
 - Updated: fzf-0.46.1-1
